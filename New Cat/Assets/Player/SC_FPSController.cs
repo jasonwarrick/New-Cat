@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+/**
+    Code adapted from: https://www.sharpcoderblog.com/blog/unity-3d-fps-controller
+**/
 
+[RequireComponent(typeof(CharacterController))]
 public class SC_FPSController : MonoBehaviour
 {
     public float walkingSpeed = 7.5f;
