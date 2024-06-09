@@ -8,7 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] Transform holdPoint;
 
 
-    [SerializeField] LayerMask interactLayer;
+    [SerializeField] LayerMask interactLayerMask;
+    [SerializeField] int interactLayer;
     Camera cam;
     
     void Start() {
@@ -20,8 +21,11 @@ public class PlayerInteraction : MonoBehaviour
         if (Time.timeScale != 0f) {
             RaycastHit hit;
             
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayer)) {
-                Debug.Log("object in range");
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayerMask)) {
+                if (hit.transform.gameObject.layer == interactLayer)
+                {
+                    Debug.Log("object in range");
+                }
             } else {
                 
             }

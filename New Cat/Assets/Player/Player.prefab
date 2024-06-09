@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5212bd8b42207d542a3a35e5d9ea8426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 7.5
+  walkingSpeed: 3
   runningSpeed: 11.5
   jumpSpeed: 8
   gravity: 20
@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 10
-  holdPoint: {fileID: 0}
-  interactLayer:
+  holdPoint: {fileID: 3504658796813759574}
+  interactLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
+  interactLayer: 7
 --- !u!1 &2526503658846184302
 GameObject:
   m_ObjectHideFlags: 0
