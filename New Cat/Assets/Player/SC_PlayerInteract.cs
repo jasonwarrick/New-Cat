@@ -22,12 +22,13 @@ public class PlayerInteraction : MonoBehaviour
             RaycastHit hit;
             
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayerMask)) {
-                if (hit.transform.gameObject.layer == interactLayer)
-                {
-                    Debug.Log("object in range");
+                if (hit.transform.gameObject.layer == interactLayer) {
+                    HUDManager.instance.SetCrosshair(true, true);
+                } else {
+                    HUDManager.instance.SetCrosshair(false, false);
                 }
             } else {
-                
+                HUDManager.instance.SetCrosshair(false, false);
             }
         }
         

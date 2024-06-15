@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee28ca263ff3f3147a4f6600e542f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 10
+  interactDistance: 5
   holdPoint: {fileID: 3504658796813759574}
   interactLayerMask:
     serializedVersion: 2
