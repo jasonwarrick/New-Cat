@@ -368,7 +368,8 @@
 "Assets/Player/SC_FPSLook.cs"
 "Assets/Player/SC_PlayerInteract.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
-"Assets/UI/HUDManager.cs"
+"Assets/UI/HUD/HUDManager.cs"
+"Assets/UI/UIManager.cs"
 -langversion:9.0
 
 /deterministic
