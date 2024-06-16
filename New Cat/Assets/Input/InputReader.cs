@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 
+/**
+    Mouse smoothing code adapted from: https://forum.unity.com/threads/need-help-smoothing-out-my-mouse-look-solved.543416/
+**/
+
 public class InputReader : MonoBehaviour
 {
     public static InputReader instance;
 
     [Header("Input Variables")]
     public Vector2 moveVector = new Vector2(0f, 0f);
+    public Vector2 mouseVector = new Vector2(0f, 0f);
     public bool interact = false;
     public bool pause = false;
+
+    [Header("Input Behavior Variables")]
+    [SerializeField] float snappiness = 10.0f; // larger values of this cause less filtering, more responsiveness
 
     [Header("Rewired")]
     // The Rewired player id of this character
@@ -26,14 +34,25 @@ public class InputReader : MonoBehaviour
 
     void Update () {
         GetInput();
+        ProcessInput();
     }
 
     void GetInput() {
-        moveVector.x = player.GetAxis("MoveHorizontal"); // get input by name or action id
+        moveVector.x = player.GetAxis("MoveHorizontal");
         moveVector.y = player.GetAxis("MoveVertical");
+
+        mouseVector.x = player.GetAxis("MouseHorizontal");
+        mouseVector.y = player.GetAxis("MouseVertical");
+
         interact = player.GetButtonDown("Interact");
         pause = player.GetButtonDown("Pause");
+    }
 
-        Debug.Log(moveVector);
+    void ProcessInput() {
+        // Store the current mouse movement
+        Vector2 input = new Vector2(mouseVector.x, mouseVector.y);
+ 
+        // Smooth the mouse movement by the snappiness factor
+        moveVector = Vector2.Lerp(moveVector, input, snappiness * Time.deltaTime);
     }
 }
