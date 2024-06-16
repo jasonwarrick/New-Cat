@@ -19,6 +19,7 @@ public class SC_FPSController : MonoBehaviour
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
+    Vector2 adjustedMoveVector = Vector2.zero;
     float rotationX = 0;
 
     [HideInInspector]
@@ -38,10 +39,13 @@ public class SC_FPSController : MonoBehaviour
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
+        
         // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
+        adjustedMoveVector = InputReader.instance.moveVector.normalized;
+
+        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * adjustedMoveVector.y : 0;
+        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * adjustedMoveVector.x : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 

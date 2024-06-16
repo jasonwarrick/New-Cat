@@ -1,0 +1,1196 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.9f1 (ea401c316338) revision 15351836'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Education' Language: 'en' Physical Memory: 16221 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/Jason/Documents/NewCat/New-Cat/New Cat
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+50418
+Successfully changed project path to: C:/Users/Jason/Documents/NewCat/New-Cat/New Cat
+C:/Users/Jason/Documents/NewCat/New-Cat/New Cat
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [21168] Host "[IP] 192.168.0.109 [Port] 0 [Flags] 2 [Guid] 3016946723 [EditorId] 3016946723 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-NTNSOSP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [21168] Host "[IP] 192.168.0.109 [Port] 0 [Flags] 2 [Guid] 3016946723 [EditorId] 3016946723 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-NTNSOSP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 11.82 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.9f1 (ea401c316338)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Jason/Documents/NewCat/New-Cat/New Cat/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x2188)
+    Vendor:   NVIDIA
+    VRAM:     3950 MB
+    Driver:   31.0.15.4665
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.012815 seconds.
+- Loaded All Assemblies, in  0.286 seconds
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.187 seconds
+Domain Reload Profiling: 471ms
+	BeginReloadAssembly (80ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (114ms)
+		LoadAssemblies (79ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (111ms)
+			TypeCache.Refresh (110ms)
+				TypeCache.ScanAssembly (100ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (187ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (147ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (91ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.594 seconds
+Refreshing native plugins compatible for Editor in 4.80 ms, found 5 plugins.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.624 seconds
+Domain Reload Profiling: 1215ms
+	BeginReloadAssembly (117ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (397ms)
+		LoadAssemblies (287ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (147ms)
+				TypeCache.ScanAssembly (128ms)
+			ScanForSourceGeneratedMonoScriptInfo (16ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (625ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (497ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (377ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 11.30 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4996 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (0.8 MB). Loaded Objects now: 5492.
+Memory consumption went from 200.5 MB to 199.8 MB.
+Total: 6.385000 ms (FindLiveObjects: 0.614000 ms CreateObjectMapping: 0.434200 ms MarkObjects: 4.481300 ms  DeleteObjects: 0.852800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 593.737391 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/CalibrationWindow.cs
+  artifactKey: Guid(4e99c23df54f27446bb8e263e0ceb8ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/CalibrationWindow.cs using Guid(4e99c23df54f27446bb8e263e0ceb8ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '651c6548739161b5a9fd1bac3b0de8d7') in 0.166616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/icon-mouse.png
+  artifactKey: Guid(fc88ce24a47f4014cb0ad237abc8d1dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/icon-mouse.png using Guid(fc88ce24a47f4014cb0ad237abc8d1dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5abb3b029ee5e259230ca9480ec46d4d') in 0.050186 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Settings/URP-Balanced.asset
+  artifactKey: Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Settings/URP-Balanced.asset using Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4a6f3069db13772a4c725f16c1147822') in 0.052123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Data/EditorSettings.asset
+  artifactKey: Guid(2f52a784359563243a07068b72906331) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Data/EditorSettings.asset using Guid(2f52a784359563243a07068b72906331) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '18dcabda5823ef41bda3eb25c5d7452e') in 0.009744 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
+  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '530085e9455045369f4fc1cc5773b9b2') in 0.038484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Rewired/DevTools/JoystickElementIdentifier.unity
+  artifactKey: Guid(f1add3d573270314f9989babd5c4a3c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/DevTools/JoystickElementIdentifier.unity using Guid(f1add3d573270314f9989babd5c4a3c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f0d9c1d51f8b75e29c8131d8fc63848e') in 0.007745 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Internal/Assets/InputManagerSettings.json
+  artifactKey: Guid(bcea3028aba255e42b05f81f46156fc9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Assets/InputManagerSettings.json using Guid(bcea3028aba255e42b05f81f46156fc9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '12cdbbec6e2b52b916f3cd65e1a4b8b9') in 0.008498 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Rewired/Integration/UnityUI/RewiredEventSystem.cs
+  artifactKey: Guid(6b991181f58043ec814f0900013f8cac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Integration/UnityUI/RewiredEventSystem.cs using Guid(6b991181f58043ec814f0900013f8cac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '17dd8d3ab36ac94caa5819f7bbde8015') in 0.009598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/UI/Resources/Merriweather-Bold.ttf
+  artifactKey: Guid(eb6e1ea6dd480d94cb85c0f96aa11327) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UI/Resources/Merriweather-Bold.ttf using Guid(eb6e1ea6dd480d94cb85c0f96aa11327) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c1e26fd4b841db9219c6176ca053b808') in 0.026485 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/UI/Images/AvailableCrosshair.png
+  artifactKey: Guid(c6ee74203ec04a148984bb4282713290) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UI/Images/AvailableCrosshair.png using Guid(c6ee74203ec04a148984bb4282713290) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3c499eead5feba6eaadcdf5a6d14d1f') in 0.021088 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/CustomToggle.cs
+  artifactKey: Guid(8a88ff81c0189fb49a20062465f1ce37) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/CustomToggle.cs using Guid(8a88ff81c0189fb49a20062465f1ce37) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8928fe8c8b6bd07a24e599d9e0e42c0e') in 0.008322 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper_InputGrid.cs
+  artifactKey: Guid(3df4f78e545603646b14f54e328b90d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper_InputGrid.cs using Guid(3df4f78e545603646b14f54e328b90d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff0aaa1cf214e274101d9229763f7603') in 0.009711 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Player/Player.prefab
+  artifactKey: Guid(d2a13bee6c8c02041a928647532697b9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Player/Player.prefab using Guid(d2a13bee6c8c02041a928647532697b9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5bde786a43a0924e5cd3e4959acb8e3d') in 0.024962 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+  artifactKey: Guid(bc1ede39bf3643ee8e493720e4259791) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader using Guid(bc1ede39bf3643ee8e493720e4259791) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cec75769de4a2c2191f5791d4b2724df') in 0.013536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/CanvasScalerExt.cs
+  artifactKey: Guid(1d5765b502c6a5e4ab9dfff21808a241) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/CanvasScalerExt.cs using Guid(1d5765b502c6a5e4ab9dfff21808a241) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2e6d3ee2d9a1c9c870b46691612cb958') in 0.008541 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Rewired/Internal/Assets/Integration/UnityUI.zip
+  artifactKey: Guid(e25dd79ec7d397944b10562e3f7cdb85) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Assets/Integration/UnityUI.zip using Guid(e25dd79ec7d397944b10562e3f7cdb85) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2c6befebf1cf5f34c524901cc2fcd1e5') in 0.007140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Rewired/Internal/Assets/Extras/UnityInputOverride.zip
+  artifactKey: Guid(98a75b87bebca2d438cbe179fe9dc1b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Assets/Extras/UnityInputOverride.zip using Guid(98a75b87bebca2d438cbe179fe9dc1b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b20deb2d37b71a2a39b65653d3849aef') in 0.008529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Themes/DefaultTheme.asset
+  artifactKey: Guid(e15b0a66770d13f41a9adbbf6a4d7423) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Themes/DefaultTheme.asset using Guid(e15b0a66770d13f41a9adbbf6a4d7423) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd9920648f3562e8f477ab1327dfa6aad') in 0.048194 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Internal/Assets/Extras/ControlMapper.zip
+  artifactKey: Guid(4d8644d3b20c8284687aff929ce046dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Assets/Extras/ControlMapper.zip using Guid(4d8644d3b20c8284687aff929ce046dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5f251902c77d452a763ceee1dbd9a374') in 0.008385 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/InputBehaviorWindow.cs
+  artifactKey: Guid(6aa89d54922800f4c9fa81625f03ac3d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/InputBehaviorWindow.cs using Guid(6aa89d54922800f4c9fa81625f03ac3d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd180f8c1318263052729a08c8dc0cbb') in 0.010579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Integration/UnityUI/Editor/UnityUISetup.cs
+  artifactKey: Guid(d3f4335db15d2104db2318fe526eb4c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Integration/UnityUI/Editor/UnityUISetup.cs using Guid(d3f4335db15d2104db2318fe526eb4c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e4ec1abdad29fa4a5410554e76413042') in 0.016604 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Languages/DefaultEnglish.asset
+  artifactKey: Guid(2be3ae985e9faeb4b9dd3a1c915a3fc7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Languages/DefaultEnglish.asset using Guid(2be3ae985e9faeb4b9dd3a1c915a3fc7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e5bd579765950a34a4cc547a196bb2f0') in 0.014906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+  artifactKey: Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader using Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e26c8d1899fb482dbd9e2339ac2989a6') in 0.011708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+  artifactKey: Guid(fe393ace9b354375a9cb14cdbbc28be4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader using Guid(fe393ace9b354375a9cb14cdbbc28be4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4091f186f171d5a4be4baec3217659df') in 0.011954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TextMesh Pro/Resources/TMP Settings.asset
+  artifactKey: Guid(3f5b5dff67a942289a9defa416b206f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Resources/TMP Settings.asset using Guid(3f5b5dff67a942289a9defa416b206f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2f9f4a76a220a80ac971565fed171ed1') in 0.027329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Images/icon-invert.png
+  artifactKey: Guid(c084db22e43bd61499f3d42d7946ba31) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Images/icon-invert.png using Guid(c084db22e43bd61499f3d42d7946ba31) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e1ed61013d832124c3c9f16d0d94cb3e') in 0.021762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper.cs
+  artifactKey: Guid(edac79059a45d244a8050315593a7e9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper.cs using Guid(edac79059a45d244a8050315593a7e9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '354436a6fcb4bf6fb14116ad644e2180') in 0.008254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0e87136309c8c4ca09f70c6cb87f1b18') in 0.029527 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+  artifactKey: Guid(f952c082cb03451daed3ee968ac6c63e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset using Guid(f952c082cb03451daed3ee968ac6c63e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '206531bb998a8711a5a717b41800ba59') in 0.009448 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Rewired/DevTools/UnityJoystickElementIdentifier.prefab
+  artifactKey: Guid(9431ba5b04ae3934a8cde0abd640ad65) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/DevTools/UnityJoystickElementIdentifier.prefab using Guid(9431ba5b04ae3934a8cde0abd640ad65) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3ebb37b650ced4fd63811b0ccb3e8349') in 0.011115 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/ButtonInfo.cs
+  artifactKey: Guid(dd0463b06a911144bb290fdd9fadedf6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/ButtonInfo.cs using Guid(dd0463b06a911144bb290fdd9fadedf6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bc199c473e428c85fae7bc06eaa20ef7') in 0.008681 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper_Enums.cs
+  artifactKey: Guid(467218971864e7a4faf88d836ca4de91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper_Enums.cs using Guid(467218971864e7a4faf88d836ca4de91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '31bb0446d703bc46dacf6444a0c63483') in 0.009267 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Rewired/Internal/Libraries/Editor/Rewired_Editor.dll
+  artifactKey: Guid(e37f52cd3eda26749a57fa3f7e72be70) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Editor/Rewired_Editor.dll using Guid(e37f52cd3eda26749a57fa3f7e72be70) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7f19f5578e492e23cde1b0419afb4f16') in 0.045185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/UI/Resources/Merriweather-Regular.ttf
+  artifactKey: Guid(34e4eeb1bc71a094ca1122395af9122a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/UI/Resources/Merriweather-Regular.ttf using Guid(34e4eeb1bc71a094ca1122395af9122a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae840dc0b51289f4f3c7154369a49c89') in 0.021058 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper_WindowManager.cs
+  artifactKey: Guid(51dc8c3336dee634aa5275782cf622c3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/ControlMapper_WindowManager.cs using Guid(51dc8c3336dee634aa5275782cf622c3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c04281f9417de762801f7fa6abd9823b') in 0.008909 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+  artifactKey: Guid(f7ada0af4f174f0694ca6a487b8f543d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader using Guid(f7ada0af4f174f0694ca6a487b8f543d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ed466b2acb06b55617c751c510fbf065') in 0.012502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
+  artifactKey: Guid(476cc7d7cd9874016adc216baab94a0a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs using Guid(476cc7d7cd9874016adc216baab94a0a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b6d99b8e171d80e012ce23bdc077d971') in 0.008490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows.dll
+  artifactKey: Guid(b8fd39a7484741641938c8eb58d44f24) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows.dll using Guid(b8fd39a7484741641938c8eb58d44f24) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '78c89073ec09b96676d1513061488b7d') in 0.010317 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/CHProPedals.asset
+  artifactKey: Guid(e2743c5f596f9ab488ff7c94afdda17e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/CHProPedals.asset using Guid(e2743c5f596f9ab488ff7c94afdda17e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ca558a74b4201fe2ab1af20a7bea91a2') in 0.086424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/BuffaloBGCFC801.asset
+  artifactKey: Guid(f37439def9763f043bc4b3dcebb0b52e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/BuffaloBGCFC801.asset using Guid(f37439def9763f043bc4b3dcebb0b52e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6f7706fd2cae552138d01a1ff90038da') in 0.089865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Prefabs/Parts/Button.prefab
+  artifactKey: Guid(f71e844abdb0e87458f73bf1ce75ee09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Prefabs/Parts/Button.prefab using Guid(f71e844abdb0e87458f73bf1ce75ee09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b4d9d220832cba104b6d1946d8395f7') in 0.041490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ArcadeGunsG500.asset
+  artifactKey: Guid(0e96c4c02687d9349ad0ff44ae9d9fcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ArcadeGunsG500.asset using Guid(0e96c4c02687d9349ad0ff44ae9d9fcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '00ebf3b9a4990d3ae06c001a5b8cd4ea') in 0.072048 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/CHThrottleQuadrant.asset
+  artifactKey: Guid(a01ca6d704b9ae748a1c6e481731bd21) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/CHThrottleQuadrant.asset using Guid(a01ca6d704b9ae748a1c6e481731bd21) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6ab76811f816e27833a3c272722d07a3') in 0.107642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/GameCubeController_Mayflash2p.asset
+  artifactKey: Guid(81f1ed74960dd9b48bfd5de10f395e96) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/GameCubeController_Mayflash2p.asset using Guid(81f1ed74960dd9b48bfd5de10f395e96) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae8719dcdec328fe59cc0a699ad888d8') in 0.101466 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MadCatzCTRLR.asset
+  artifactKey: Guid(2fc2bee364a1e1646ae4a645bf762f91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MadCatzCTRLR.asset using Guid(2fc2bee364a1e1646ae4a645bf762f91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ba362f7497b954aa405122941bc56bde') in 0.104568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MicrosoftSideWinderJoystick.asset
+  artifactKey: Guid(4a44f7dfc47d2a544ac3c7497f0b7973) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MicrosoftSideWinderJoystick.asset using Guid(4a44f7dfc47d2a544ac3c7497f0b7973) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b38c03fbe7adeef49468bbab9a893fd1') in 0.085383 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechG27.asset
+  artifactKey: Guid(5b4ec7826eed24222ba948f77f2fa65c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechG27.asset using Guid(5b4ec7826eed24222ba948f77f2fa65c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e71ab7f719e607b34abdf1681b40d773') in 0.154367 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ipegaBluetoothClassicGamePad.asset
+  artifactKey: Guid(8a320167d6be8bb4cbefb4f77e0ae23f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ipegaBluetoothClassicGamePad.asset using Guid(8a320167d6be8bb4cbefb4f77e0ae23f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4cae56cbb3d1f95f550054d1cc077913') in 0.100273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechExtreme3DPro.asset
+  artifactKey: Guid(7c86271a5aa17a8459191b8f7fd6c98f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechExtreme3DPro.asset using Guid(7c86271a5aa17a8459191b8f7fd6c98f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b7fd25b72b634417c754b108b2bb4e99') in 0.119085 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekCyborgEvo.asset
+  artifactKey: Guid(f4dd06702b43a5647b740fa002a8fe27) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekCyborgEvo.asset using Guid(f4dd06702b43a5647b740fa002a8fe27) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0be5440b87c9fd07ff5d36bfb97bd3e3') in 0.112554 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NykoAirfloEX.asset
+  artifactKey: Guid(0abf19c79e122564ea3bc13997aa6a0c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NykoAirfloEX.asset using Guid(0abf19c79e122564ea3bc13997aa6a0c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bf26d6dfef123747f148770829ef3084') in 0.114640 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/PIEngineeringRailDriver.asset
+  artifactKey: Guid(bd5c168ccfd771047b3b046934982159) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/PIEngineeringRailDriver.asset using Guid(bd5c168ccfd771047b3b046934982159) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d5274b804d4c918cb73aacf96796b89') in 0.078700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Rewired_WebGL.dll
+  artifactKey: Guid(258eb41b0134d754ea46991f1b27f303) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Rewired_WebGL.dll using Guid(258eb41b0134d754ea46991f1b27f303) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '68b200a22ec7eaf938f2fa08031fb1d6') in 0.009572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Rewired_Linux.xml
+  artifactKey: Guid(e7871e43e872f8f43b58e9624af253d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Rewired_Linux.xml using Guid(e7871e43e872f8f43b58e9624af253d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1aedd7f495bbf06cc4be6a3027e6d9c6') in 0.008958 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/AmazonFireTVRemote.asset
+  artifactKey: Guid(2eaf41098f6f59147b10436abc7eea84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/AmazonFireTVRemote.asset using Guid(2eaf41098f6f59147b10436abc7eea84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7495b17a4b8d55dc03937b1ce2e2c973') in 0.054595 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 6.58 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (0.7 MB). Loaded Objects now: 5494.
+Memory consumption went from 103.3 MB to 102.6 MB.
+Total: 4.036800 ms (FindLiveObjects: 0.391400 ms CreateObjectMapping: 0.262300 ms MarkObjects: 3.096500 ms  DeleteObjects: 0.285300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4.191842 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+  artifactKey: Guid(6e59c59b81ab47f9b6ec5781fa725d2c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt using Guid(6e59c59b81ab47f9b6ec5781fa725d2c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a9ee29b44fc03c5ff453ff0dcf1d8505') in 0.017985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.476577 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekP990.asset
+  artifactKey: Guid(900f3cdee29d1094ab71941e4388d65e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekP990.asset using Guid(900f3cdee29d1094ab71941e4388d65e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '99fbc7fcc45f27d8d5131258e013db89') in 0.102407 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.392181 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekST290Pro.asset
+  artifactKey: Guid(52a7405c6e6693d49a2f7efa62d41ead) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekST290Pro.asset using Guid(52a7405c6e6693d49a2f7efa62d41ead) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dadd9e27c1b4f6015fabe0bde7b9766e') in 0.107068 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.387809 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekX56RhinoStick.asset
+  artifactKey: Guid(faaaddd7598d81745872208f0fb1a9d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekX56RhinoStick.asset using Guid(faaaddd7598d81745872208f0fb1a9d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c954a33932d2624a29cb69f82e492cc9') in 0.098037 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SamsungEI-GP20.asset
+  artifactKey: Guid(a7a3b1e248b756a41a43d848a4d6bb4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SamsungEI-GP20.asset using Guid(a7a3b1e248b756a41a43d848a4d6bb4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2c34435f6c6e4d568a4b44678469a3a4') in 0.088776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.301138 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SonyDualShock3.asset
+  artifactKey: Guid(dd2c1503536274001bdc3d5d6be8a98f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SonyDualShock3.asset using Guid(dd2c1503536274001bdc3d5d6be8a98f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd4e429c6b68919e4db36fcae1f6cfdd') in 0.189651 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.304442 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SonyPS4Guitar.asset
+  artifactKey: Guid(85dd666458e007548970f68ea256f9ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SonyPS4Guitar.asset using Guid(85dd666458e007548970f68ea256f9ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f622bc56cefe2134c6def766568f005') in 0.059978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/StadiaController.asset
+  artifactKey: Guid(4454cb89c8ca0994493486094e90e9f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/StadiaController.asset using Guid(4454cb89c8ca0994493486094e90e9f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0b210edbdfe5be1dfd9f5fa68bf420f6') in 0.121848 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.307825 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SteelSeriesNimbusPlus_MFi.asset
+  artifactKey: Guid(6edd643fa9960c543ac4e3f29998a38a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SteelSeriesNimbusPlus_MFi.asset using Guid(6edd643fa9960c543ac4e3f29998a38a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'df24a617aeb3d495f58ff5fd716f2786') in 0.064748 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SteelSeriesNimbus_MFi.asset
+  artifactKey: Guid(aad0ba8612167154c8221413c776cf26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SteelSeriesNimbus_MFi.asset using Guid(aad0ba8612167154c8221413c776cf26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4a13ea64badfe2cb2a202d9fb05aa7b7') in 0.068860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.352569 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterF430.asset
+  artifactKey: Guid(1eebf7efc8bda234282ef13ff5a825a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterF430.asset using Guid(1eebf7efc8bda234282ef13ff5a825a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '101f8bb3b5276794f9575b613dbe0928') in 0.100793 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.394023 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterHOTASWarthogThrottle.asset
+  artifactKey: Guid(bf496c1269e18af47861cbffb62c2636) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterHOTASWarthogThrottle.asset using Guid(bf496c1269e18af47861cbffb62c2636) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ee31563de34588a2dd5b00582906e1f') in 0.153801 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.339697 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Rewired_OSX.xml
+  artifactKey: Guid(ddc8b9efe308bc74c855fc5d80dea3e2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Rewired_OSX.xml using Guid(ddc8b9efe308bc74c855fc5d80dea3e2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '88045178b4e18328cb537cb474b01f52') in 0.007930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustMasterT3PA.asset
+  artifactKey: Guid(a60184a06f4e6b74eaa1a61a47f602d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustMasterT3PA.asset using Guid(a60184a06f4e6b74eaa1a61a47f602d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aca5211e0f5f4c39e568d526bd270e5f') in 0.053716 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Rewired_WebGL.dll
+  artifactKey: Guid(258eb41b0134d754ea46991f1b27f303) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Rewired_WebGL.dll using Guid(258eb41b0134d754ea46991f1b27f303) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8cc6eebc7ac98cf58208c145a968a8b0') in 0.012401 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Prefabs/Parts/InputGridFieldInvertToggle.prefab
+  artifactKey: Guid(a183756d778416d4d885ecf041d1acda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Prefabs/Parts/InputGridFieldInvertToggle.prefab using Guid(a183756d778416d4d885ecf041d1acda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ec30bd329d9a238245a1e8ce5580ca45') in 0.024932 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Rewired/Internal/Scripts/Editor/UnityEditorBridge.cs
+  artifactKey: Guid(2e3d3511ba9df4248bd89bccd32dd426) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Scripts/Editor/UnityEditorBridge.cs using Guid(2e3d3511ba9df4248bd89bccd32dd426) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bce1d028d3be0cabfd799500902d7ae8') in 0.009856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/CHEclipseYoke.asset
+  artifactKey: Guid(7a307642c32f15647bc6b0f77d6672c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/CHEclipseYoke.asset using Guid(7a307642c32f15647bc6b0f77d6672c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '136b058898c46fe357580e13f18c6004') in 0.159592 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Rewired/Internal/Scripts/Editor/CustomInspectors/InputManagerInspector.cs
+  artifactKey: Guid(336c1b6c8b3b1a8458e2593296511aca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Scripts/Editor/CustomInspectors/InputManagerInspector.cs using Guid(336c1b6c8b3b1a8458e2593296511aca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ecc31305d5cfe492e53b50dcf07018f3') in 0.008290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Scripts/Editor/ControlMapperInspector.cs
+  artifactKey: Guid(e3e00671ae334af4fb38778107a34915) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Scripts/Editor/ControlMapperInspector.cs using Guid(e3e00671ae334af4fb38778107a34915) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f6816416b32b17a3a046616cd3e472db') in 0.009039 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ElecomJC-U3312.asset
+  artifactKey: Guid(d7472ca496136ab4c9bdc72e2c3b3128) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ElecomJC-U3312.asset using Guid(d7472ca496136ab4c9bdc72e2c3b3128) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cbc660aff08207bdc813bf8fa8b8f5c2') in 0.111261 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Rewired/Internal/Scripts/Editor/CustomInspectors/InitializerInspector.cs
+  artifactKey: Guid(b62dcb51106ba6243996bf6867fe8902) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Scripts/Editor/CustomInspectors/InitializerInspector.cs using Guid(b62dcb51106ba6243996bf6867fe8902) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a7fd638875ffe93be0c54483674f7065') in 0.010561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Rewired/Extras/ControlMapper/Prefabs/Parts/UIControlSet.prefab
+  artifactKey: Guid(47fb4e1b0f1159042ac032a510a3b81a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Extras/ControlMapper/Prefabs/Parts/UIControlSet.prefab using Guid(47fb4e1b0f1159042ac032a510a3b81a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1b7f42362ea5a63d2f35b956fd5d9414') in 0.023921 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/AmazonFireGameController.asset
+  artifactKey: Guid(14f342bd8308100479b8029fe6e86765) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/AmazonFireGameController.asset using Guid(14f342bd8308100479b8029fe6e86765) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1a078625174291e3e5128771285e2cbf') in 0.104211 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_WindowsGamingInput.pdb
+  artifactKey: Guid(c85340590a7ed6f4bb9ea9818a81e415) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_WindowsGamingInput.pdb using Guid(c85340590a7ed6f4bb9ea9818a81e415) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9732e455434fd643bfdaf341210eaf48') in 0.007151 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ZhidongN_AndroidMode.asset
+  artifactKey: Guid(87aa295af3d3b82448809f03e665bd40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ZhidongN_AndroidMode.asset using Guid(87aa295af3d3b82448809f03e665bd40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2596ae275788e69877e93f6209676743') in 0.104510 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechG920.asset
+  artifactKey: Guid(0709046a0fd63764babf9e69b062bbee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechG920.asset using Guid(0709046a0fd63764babf9e69b062bbee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'db7ab21f80c8eb04d1692b12391e8fcc') in 0.087116 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll
+  artifactKey: Guid(dbd5c32202860a64a873eb06ad207789) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_DirectInput.dll using Guid(dbd5c32202860a64a873eb06ad207789) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd71df2345e3c31cdf414dcbf8a5fb9f8') in 0.009902 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechWingManAttack2.asset
+  artifactKey: Guid(92890da0643b2394e9f4aa2231ac78bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechWingManAttack2.asset using Guid(92890da0643b2394e9f4aa2231ac78bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '07738a2cffcc4ada362d774fa5b4edd7') in 0.072536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NintendoSwitchJoyCon_Right.asset
+  artifactKey: Guid(80487ad48e254e343a231e8344cb22b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NintendoSwitchJoyCon_Right.asset using Guid(80487ad48e254e343a231e8344cb22b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4a21d12f76111a58317bc77293a727fa') in 0.087971 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ProFlightTrainerPUMA.asset
+  artifactKey: Guid(47066c55bbf750348a292bf06d03e4c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ProFlightTrainerPUMA.asset using Guid(47066c55bbf750348a292bf06d03e4c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b3b09982cb89e39dcd06b059ed51777') in 0.104663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NvidiaShieldController_2017.asset
+  artifactKey: Guid(1061f9c39091cf242bd6958aca060c2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NvidiaShieldController_2017.asset using Guid(1061f9c39091cf242bd6958aca060c2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '480d967b85e4eac2fbf7b0d1ad995e20') in 0.112716 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustMasterTH8A.asset
+  artifactKey: Guid(559012aaa7bf4a047bca356093787995) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustMasterTH8A.asset using Guid(559012aaa7bf4a047bca356093787995) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8478ea7b84713b0127b3fca01e09c8bb') in 0.085381 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_WindowsGamingInput.dll
+  artifactKey: Guid(eb6c38b0a1d769e4d812595f2fd5431a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x64/Rewired_WindowsGamingInput.dll using Guid(eb6c38b0a1d769e4d812595f2fd5431a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '31fba25702e8805ad58407413cef96a2') in 0.009154 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/RadioShackPCGamingController.asset
+  artifactKey: Guid(e5bc394572819a648b90d8483652b557) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/RadioShackPCGamingController.asset using Guid(e5bc394572819a648b90d8483652b557) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b746da8adad71d6449406fe63953af3') in 0.104202 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NintendoSwitchJoyCon_Left.asset
+  artifactKey: Guid(9ec45b94bd8c5c145be4ea6830db80be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NintendoSwitchJoyCon_Left.asset using Guid(9ec45b94bd8c5c145be4ea6830db80be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8d253ab7fee463033ee61cd37cad6ecd') in 0.099911 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x86/Rewired_WindowsGamingInput.dll
+  artifactKey: Guid(7505ba9d1e7cbd04f86f01c3d29c5e99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Libraries/Runtime/Native/WindowsStandalone/x86/Rewired_WindowsGamingInput.dll using Guid(7505ba9d1e7cbd04f86f01c3d29c5e99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2f7c89d52d86cc08ea4155ee6d50b2d8') in 0.010668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechRumblePad2.asset
+  artifactKey: Guid(b57975934979d6648a55b7ced4876c3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechRumblePad2.asset using Guid(b57975934979d6648a55b7ced4876c3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd22539c11b9e49fd806df3a9eec02ff') in 0.084720 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NintendoSwitchProController.asset
+  artifactKey: Guid(bab987e4a193e39429f4d1826e07fad8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/NintendoSwitchProController.asset using Guid(bab987e4a193e39429f4d1826e07fad8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a23a21cf4606428c1464de59b27b3633') in 0.115600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MadCatzMicroCTRLR.asset
+  artifactKey: Guid(f24f41c79902d444cb9c85b30e5e17d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/MadCatzMicroCTRLR.asset using Guid(f24f41c79902d444cb9c85b30e5e17d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3feaebcbe2299ff50f1fc950bdc0e8e') in 0.094649 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechMOMO.asset
+  artifactKey: Guid(d604681f0d3a82d488e5cc5650c38595) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/LogitechMOMO.asset using Guid(d604681f0d3a82d488e5cc5650c38595) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fcc8b1a9ab0b5fd5df55287b49d60b02') in 0.060228 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterTWCSThrottle.asset
+  artifactKey: Guid(05c3d0c75cbd74947a8e2b366e776b68) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterTWCSThrottle.asset using Guid(05c3d0c75cbd74947a8e2b366e776b68) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cddf840564946848664161529214a007') in 0.099133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekHeavyEquipmentControlPanel.asset
+  artifactKey: Guid(66680992b0f85d4498441e130e3892d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/SaitekHeavyEquipmentControlPanel.asset using Guid(66680992b0f85d4498441e130e3892d6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'af6f28534eb7f37f1bad880917c5b355') in 0.106002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/HoripadUltimateHIP-047U_MFi.asset
+  artifactKey: Guid(63de6a6dd78215f47aac0880102bd423) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/HoripadUltimateHIP-047U_MFi.asset using Guid(63de6a6dd78215f47aac0880102bd423) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e4f6884811f18abefb15ebc98421fbf') in 0.068985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ipegaMultiMediaBluetoothController.asset
+  artifactKey: Guid(8781775f3250cb84e837f9a6d789b942) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ipegaMultiMediaBluetoothController.asset using Guid(8781775f3250cb84e837f9a6d789b942) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a84697dc3265a3156790a78d59115740') in 0.092272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterTFlightHotasX.asset
+  artifactKey: Guid(f6fb8bb24a87a9e47b993b0be9b3800e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Rewired/Internal/Data/Controllers/HardwareMaps/Joysticks/ThrustmasterTFlightHotasX.asset using Guid(f6fb8bb24a87a9e47b993b0be9b3800e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6be3d417b13be60649cecc8116b97612') in 0.121763 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in 11.028 seconds
+Refreshing native plugins compatible for Editor in 6.10 ms, found 5 plugins.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  8.505 seconds
+Domain Reload Profiling: 19530ms
+	BeginReloadAssembly (3533ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (2ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (201ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (7251ms)
+		LoadAssemblies (10671ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (2ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (8506ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (436ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (317ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 7.06 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4842 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (0.7 MB). Loaded Objects now: 5499.
+Memory consumption went from 174.1 MB to 173.4 MB.
+Total: 3.729000 ms (FindLiveObjects: 0.395000 ms CreateObjectMapping: 0.256200 ms MarkObjects: 2.718000 ms  DeleteObjects: 0.358600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
