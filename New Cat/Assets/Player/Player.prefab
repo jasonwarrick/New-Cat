@@ -32,9 +32,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2066370192624455919}
   - {fileID: 3693852224167397432}
   - {fileID: 3504658796813759574}
+  - {fileID: 2066370192624455919}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7042722352381514283
@@ -77,11 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 3
   runningSpeed: 11.5
-  jumpSpeed: 8
   gravity: 20
   playerCamera: {fileID: 8248597149962038860}
-  lookSpeed: 2
-  lookXLimit: 45
   canMove: 1
 --- !u!114 &9194440060844333000
 MonoBehaviour:

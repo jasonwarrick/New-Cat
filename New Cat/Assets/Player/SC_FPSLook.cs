@@ -4,36 +4,26 @@ using UnityEngine;
 
 public class SC_FPSLook : MonoBehaviour
 {
-    public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
-    float rotationX = 0;
+    public float Sensitivity {
+		get { return sensitivity; }
+		set { sensitivity = value; }
+	}
+    
+	[Range(0.1f, 9f)][SerializeField] float sensitivity = 2f;
+	[Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
+	[Range(0f, 90f)][SerializeField] float yRotationLimit = 88f;
 
-    [SerializeField] Transform cameraPoint;
+	Vector2 rotation = Vector2.zero;
+	const string xAxis = "Mouse X"; //Strings in direct code generate garbage, storing and re-using them creates no garbage
+	const string yAxis = "Mouse Y";
 
-    [HideInInspector]
-    public bool canLook = true;
+	void Update(){
+		rotation.x += Input.GetAxis(xAxis) * sensitivity;
+		rotation.y += Input.GetAxis(yAxis) * sensitivity;
+		rotation.y = Mathf.Clamp(rotation.y, -yRotationLimit, yRotationLimit);
+		var xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
+		var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Lock cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Player and Camera rotation
-        if (canLook)
-        {
-            transform.position = cameraPoint.position;
-            Debug.Log(cameraPoint.parent.rotation);
-            transform.rotation = cameraPoint.parent.rotation;
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            // cameraPoint.parent.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-        }
-    }
+		transform.localRotation = xQuat * yQuat; //Quaternions seem to rotate more consistently than EulerAngles. Sensitivity seemed to change slightly at certain degrees using Euler. transform.localEulerAngles = new Vector3(-rotation.y, rotation.x, 0);
+	}
 }

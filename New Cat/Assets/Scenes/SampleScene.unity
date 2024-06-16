@@ -1131,7 +1131,10 @@ MonoBehaviour:
       _name: Player
       _descriptiveName: Player
       _startPlaying: 1
-      _defaultJoystickMaps: []
+      _defaultJoystickMaps:
+      - _enabled: 1
+        _categoryId: 0
+        _layoutId: 0
       _defaultMouseMaps:
       - _enabled: 1
         _categoryId: 0
@@ -1272,7 +1275,80 @@ MonoBehaviour:
     - _name: Default
       _descriptiveName: Default
       _id: 0
-    joystickMaps: []
+    joystickMaps:
+    - id: 0
+      categoryId: 0
+      layoutId: 0
+      name: 
+      hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 1
+        _elementType: 0
+        _elementIdentifierId: 0
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 0
+        _elementType: 0
+        _elementIdentifierId: 1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 2
+        _elementType: 1
+        _elementIdentifierId: 4
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 3
+        _elementType: 1
+        _elementIdentifierId: 14
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 4
+        _elementType: 0
+        _elementIdentifierId: 2
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 5
+        _elementType: 0
+        _elementIdentifierId: 3
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     keyboardMaps:
     - id: 0
       categoryId: 0
@@ -1401,7 +1477,7 @@ MonoBehaviour:
     keyboardLayoutIdCounter: 1
     mouseLayoutIdCounter: 1
     customControllerLayoutIdCounter: 1
-    joystickMapIdCounter: 0
+    joystickMapIdCounter: 1
     keyboardMapIdCounter: 1
     mouseMapIdCounter: 1
     customControllerMapIdCounter: 0
@@ -1443,12 +1519,6 @@ Transform:
   - {fileID: 1673305405}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1753112354 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7263949564576130937, guid: d2a13bee6c8c02041a928647532697b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7073260320625233345}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2033952558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1548,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1753112354}
   - {fileID: 611373202}
   - {fileID: 1169946834}
   m_Father: {fileID: 0}
@@ -1612,7 +1681,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2033952559}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2495833255369617916, guid: d2a13bee6c8c02041a928647532697b9,
         type: 3}
@@ -1624,25 +1693,20 @@ PrefabInstance:
       propertyPath: lookSpeed
       value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6924077951600402280, guid: d2a13bee6c8c02041a928647532697b9,
-        type: 3}
-      propertyPath: lookXLimit
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 7263949564576130937, guid: d2a13bee6c8c02041a928647532697b9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -198.74455
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7263949564576130937, guid: d2a13bee6c8c02041a928647532697b9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -187.49979
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7263949564576130937, guid: d2a13bee6c8c02041a928647532697b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 214.27852
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7263949564576130937, guid: d2a13bee6c8c02041a928647532697b9,
         type: 3}
@@ -1679,6 +1743,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8826392910525451140, guid: d2a13bee6c8c02041a928647532697b9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1690,6 +1759,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1368047835}
   - {fileID: 419511682}
+  - {fileID: 7073260320625233345}
   - {fileID: 2033952559}
   - {fileID: 1671759707}
   - {fileID: 1452192311}

@@ -53,6 +53,6 @@ public class InputReader : MonoBehaviour
         Vector2 input = new Vector2(mouseVector.x, mouseVector.y);
  
         // Smooth the mouse movement by the snappiness factor
-        moveVector = Vector2.Lerp(moveVector, input, snappiness * Time.deltaTime);
+        mouseVector = Vector2.Lerp(mouseVector, input, snappiness * Time.deltaTime);
     }
 }
