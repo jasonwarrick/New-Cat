@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] float interactDistance;
     [SerializeField] Transform holdPoint;
 
+    GameObject objectInRange = null;
 
     [SerializeField] LayerMask interactLayerMask;
     [SerializeField] int interactLayer;
@@ -22,12 +23,17 @@ public class PlayerInteraction : MonoBehaviour
             RaycastHit hit;
             
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayerMask)) {
+                objectInRange = hit.transform.gameObject;
                 ProcessRaycast(hit);
             } else {
+                objectInRange = null;
                 HUDManager.instance.SetCrosshair(false, false);
             }
         }
         
+        if (InputReader.instance.interact) {
+            Interact();
+        }
     }
 
     void ProcessRaycast(RaycastHit hit) {
@@ -41,6 +47,14 @@ public class PlayerInteraction : MonoBehaviour
             }
         } else {
             HUDManager.instance.SetCrosshair(false, false);
+        }
+    }
+
+    void Interact() {
+        if (objectInRange != null) {
+            Debug.Log(objectInRange.name);
+        } else {
+            Debug.Log("nothing to interact with");
         }
     }
 }
