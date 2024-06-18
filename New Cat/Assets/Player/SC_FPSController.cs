@@ -67,10 +67,10 @@ public class SC_FPSController : MonoBehaviour
 
         // Player and Camera rotation
         if (canMove) {
-            rotationX += -InputReader.instance.mouseVector.y * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, InputReader.instance.mouseVector.x * lookSpeed, 0);
+            rotationX += -InputReader.instance.mouseVector.y * lookSpeed; // Adjust the mouse input by the look speed
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit); // Make sure the rotation doesn't exceed the look limit
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0); // Rotate the camera around the x axis
+            transform.rotation *= Quaternion.Euler(0, InputReader.instance.mouseVector.x * lookSpeed, 0); // Rotate the player around the y axis
         }
     }
 }

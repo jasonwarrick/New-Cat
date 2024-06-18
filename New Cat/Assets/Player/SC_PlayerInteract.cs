@@ -22,15 +22,19 @@ public class PlayerInteraction : MonoBehaviour
             RaycastHit hit;
             
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayerMask)) {
-                if (hit.transform.gameObject.layer == interactLayer) {
-                    HUDManager.instance.SetCrosshair(true, true);
-                } else {
-                    HUDManager.instance.SetCrosshair(false, false);
-                }
+                ProcessRaycast(hit);
             } else {
                 HUDManager.instance.SetCrosshair(false, false);
             }
         }
         
+    }
+
+    void ProcessRaycast(RaycastHit hit) {
+        if (hit.transform.gameObject.layer == interactLayer) {
+            HUDManager.instance.SetCrosshair(true, true);
+        } else {
+            HUDManager.instance.SetCrosshair(false, false);
+        }
     }
 }

@@ -18,7 +18,11 @@ public class InputReader : MonoBehaviour
     public bool pause = false;
 
     [Header("Input Behavior Variables")]
+    [Tooltip("Filters and smooths mouse input; larger values = less filtering and jerkier movement")]
     [SerializeField] float snappiness = 10.0f; // larger values of this cause less filtering, more responsiveness
+    [Tooltip("Increases the look speed when using a joystick")]
+    [SerializeField] float joystickLookFactor;
+    bool usingJoystick = false;
 
     [Header("Rewired")]
     // The Rewired player id of this character
@@ -35,6 +39,14 @@ public class InputReader : MonoBehaviour
     void Update () {
         GetInput();
         ProcessInput();
+        CheckController();
+    }
+
+    void CheckController() {
+        Controller controller = player.controllers.GetLastActiveController();
+        if (controller != null && controller.type == ControllerType.Joystick) {
+            usingJoystick = true;
+        } else { usingJoystick = false; }
     }
 
     void GetInput() {
@@ -43,6 +55,10 @@ public class InputReader : MonoBehaviour
 
         mouseVector.x = player.GetAxis("MouseHorizontal");
         mouseVector.y = player.GetAxis("MouseVertical");
+
+        if (usingJoystick) {
+            mouseVector *= joystickLookFactor;
+        }
 
         interact = player.GetButtonDown("Interact");
         pause = player.GetButtonDown("Pause");
