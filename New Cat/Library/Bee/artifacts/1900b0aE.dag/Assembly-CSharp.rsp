@@ -370,6 +370,7 @@
 "Assets/Interactables/SC_Interact.cs"
 "Assets/Player/SC_FPSController.cs"
 "Assets/Player/SC_FPSLook.cs"
+"Assets/Player/SC_ObjectHolding.cs"
 "Assets/Player/SC_PlayerInteract.cs"
 "Assets/Rewired/Extras/ControlMapper/Examples/ControlMapperDemo/Scripts/ControlMapperDemoMessage.cs"
 "Assets/Rewired/Extras/ControlMapper/Scripts/ButtonInfo.cs"

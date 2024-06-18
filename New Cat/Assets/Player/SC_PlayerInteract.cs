@@ -12,9 +12,11 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] LayerMask interactLayerMask;
     [SerializeField] int interactLayer;
     Camera cam;
+    SC_ObjectHolding objectHolding;
     
     void Start() {
         cam = GetComponentInChildren<Camera>();
+        objectHolding = holdPoint.GetComponentInChildren<SC_ObjectHolding>();
     }
 
     // Update is called once per frame
@@ -52,7 +54,15 @@ public class PlayerInteraction : MonoBehaviour
 
     void Interact() {
         if (objectInRange != null) {
-            Debug.Log(objectInRange.name);
+            switch (objectInRange.GetComponent<SC_Interact>().Type) {
+                case 1:
+                    objectHolding.GrabObject(objectInRange);
+                    break;
+                
+                default:
+                    Debug.Log("can't interact");
+                    break;
+            }
         } else {
             Debug.Log("nothing to interact with");
         }
