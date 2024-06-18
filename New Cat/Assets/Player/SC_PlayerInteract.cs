@@ -31,8 +31,14 @@ public class PlayerInteraction : MonoBehaviour
     }
 
     void ProcessRaycast(RaycastHit hit) {
-        if (hit.transform.gameObject.layer == interactLayer) {
-            HUDManager.instance.SetCrosshair(true, true);
+        GameObject hitObject = hit.transform.gameObject;
+        
+        if (hitObject.layer == interactLayer && hitObject.GetComponent<SC_Interact>() != null) {
+            if (hitObject.GetComponent<SC_Interact>().Available) {
+                HUDManager.instance.SetCrosshair(true, true);
+            } else {
+                HUDManager.instance.SetCrosshair(true, false);
+            }
         } else {
             HUDManager.instance.SetCrosshair(false, false);
         }
