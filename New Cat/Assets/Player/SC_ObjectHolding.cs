@@ -12,5 +12,6 @@ public class SC_ObjectHolding : MonoBehaviour
         heldObject = newObject;
         heldObject.transform.parent = transform;
         heldObject.transform.position = transform.position;
+        heldObject.GetComponent<Collider>().enabled = false;
     }
 }

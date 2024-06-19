@@ -6,11 +6,12 @@ public class SC_Interact : MonoBehaviour
 {
     [SerializeField] bool isAvailable;
     public bool Available {
-        get { return isAvailable; }   // get method
-        set { isAvailable = value; }  // set method
+        get { return isAvailable; } 
+        set { isAvailable = value; }
     }
 
     [Tooltip(" 1: pickup - 2: minigame - 3: environment object")]
+    [Range(1, 3)]
     [SerializeField] int type;
     public int Type {
         get { return type; }

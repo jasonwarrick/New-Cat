@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    [Header("Interaction Variables")]
     [SerializeField] float interactDistance;
-    [SerializeField] Transform holdPoint;
-
+    
+    [Header("State Variables")]
     GameObject objectInRange = null;
+    bool canInteract = true;
 
+    [Header("References")]
+    [SerializeField] Transform holdPoint;
     [SerializeField] LayerMask interactLayerMask;
     [SerializeField] int interactLayer;
     Camera cam;
@@ -19,15 +23,17 @@ public class PlayerInteraction : MonoBehaviour
         objectHolding = holdPoint.GetComponentInChildren<SC_ObjectHolding>();
     }
 
-    // Update is called once per frame
+    public void SetCanInteract(bool newCanInteract) {
+        canInteract = newCanInteract;
+    }
+
     void Update() {
-        if (Time.timeScale != 0f) {
+        if (canInteract) {
             RaycastHit hit;
             
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayerMask)) {
-                objectInRange = hit.transform.gameObject;
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactDistance, interactLayerMask)) { // Shoot a ray out from the center of the screen and store what it hits
                 ProcessRaycast(hit);
-            } else {
+            } else { // If there isn't anything, empty the object in range and reset the crosshair
                 objectInRange = null;
                 HUDManager.instance.SetCrosshair(false, false);
             }
@@ -38,33 +44,44 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    void ProcessRaycast(RaycastHit hit) {
+    void ProcessRaycast(RaycastHit hit) { // Set the correct object references and flags based on what is hit by the raycast
         GameObject hitObject = hit.transform.gameObject;
         
-        if (hitObject.layer == interactLayer && hitObject.GetComponent<SC_Interact>() != null) {
-            if (hitObject.GetComponent<SC_Interact>().Available) {
+        if (hitObject.layer == interactLayer && hitObject.GetComponent<SC_Interact>() != null) { // If the hit object is interactable
+            objectInRange = hitObject;
+
+            if (hitObject.GetComponent<SC_Interact>().Available) { // Set the crosshair according to interact availability
                 HUDManager.instance.SetCrosshair(true, true);
             } else {
                 HUDManager.instance.SetCrosshair(true, false);
             }
-        } else {
+        } else { // If the object is not an interactable, empty the object in range and reset the crosshair
+            objectInRange = null;
             HUDManager.instance.SetCrosshair(false, false);
         }
     }
 
     void Interact() {
         if (objectInRange != null) {
-            switch (objectInRange.GetComponent<SC_Interact>().Type) {
-                case 1:
-                    objectHolding.GrabObject(objectInRange);
-                    break;
-                
-                default:
-                    Debug.Log("can't interact");
-                    break;
+            if (objectInRange.GetComponent<SC_Interact>().Available) { // Nested if statements for future implementation of fail noises
+                switch (objectInRange.GetComponent<SC_Interact>().Type) { // Perform the correct interaction method based on the object's type
+                    case 1: // Pickup
+                        objectHolding.GrabObject(objectInRange);
+                        break;
+
+                    case 2: // Minigame
+                        break;
+                    
+                    case 3: // Environment object
+                        break;
+
+                    default:
+                        Debug.Log("Not a valid interact type");
+                        break;
+                }
             }
         } else {
-            Debug.Log("nothing to interact with");
+            // Debug.Log("Nothing to interact with");
         }
     }
 }
