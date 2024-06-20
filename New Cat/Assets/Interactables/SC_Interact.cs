@@ -12,7 +12,7 @@ public class SC_Interact : MonoBehaviour
 
     [Tooltip(" 1: pickup - 2: minigame - 3: environment object")]
     [Range(1, 3)]
-    [SerializeField] int type;
+    [SerializeField] int type = 1;
     public int Type {
         get { return type; }
         set { type = value; }
