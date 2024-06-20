@@ -16,24 +16,20 @@ public class SC_ObjectHolding : MonoBehaviour
     Coroutine moveRoutine;
 
     public void GrabObject(GameObject inObject) {
-        if (inObject == null) { return; }
+        if (inObject == null) { return; } // Catch any erroneous calls
+        if (swapping) { SwapObjects(); } // If the items are already swapping, stop the current swap so the new one can start
 
-        if (swapping) { SwapObjects(); }
-
-        // Place the original held object where the new one is
+        // Reset the parent of the currently held object to that of the gameObjects parent
         heldObject.transform.parent = gameObjects;
-        // heldObject.transform.position = newObject.transform.position;
         heldObject.GetComponent<Collider>().enabled = true;
-        // heldObject.transform.eulerAngles = Vector3.zero;
 
-        // Hold the new object
+        // Do the same for the item that is being selected, as well as storing its position
         newObject = inObject;
         newObject.transform.parent = transform;
-        swapPosition = newObject.transform.position;
-        // newObject.transform.position = transform.position;
         newObject.GetComponent<Collider>().enabled = false;
-        // newObject.transform.rotation = Quaternion.identity;
+        swapPosition = newObject.transform.position;
 
+        // Start the swap
         swapping = true;
         moveRoutine = StartCoroutine("MoveObjects");
     }
@@ -41,11 +37,14 @@ public class SC_ObjectHolding : MonoBehaviour
     IEnumerator MoveObjects() {
         while(counter <= itemSwapSpeed) {
             counter += Time.deltaTime;
-            heldObject.transform.localPosition = Vector3.Lerp(heldObject.transform.localPosition, swapPosition, counter / itemSwapSpeed);
-            newObject.transform.localPosition = Vector3.Lerp(newObject.transform.localPosition, Vector3.zero, counter / itemSwapSpeed);
+            float smoothedCounter = 1 - Mathf.Pow(1 - counter, 3); // Smooth the counter variable with a cubic function
 
-            heldObject.transform.rotation = Quaternion.Lerp(heldObject.transform.rotation, Quaternion.identity, counter / itemSwapSpeed);
-            newObject.transform.rotation = Quaternion.Lerp(newObject.transform.rotation, Quaternion.identity, counter / itemSwapSpeed);
+            heldObject.transform.localPosition = Vector3.Lerp(heldObject.transform.localPosition, swapPosition, smoothedCounter / itemSwapSpeed); // Move the held object to where the selected object was taken from
+            newObject.transform.localPosition = Vector3.Lerp(newObject.transform.localPosition, Vector3.zero, smoothedCounter / itemSwapSpeed); // Move the selected object to the hold point
+
+            // Realign both objects rotations
+            newObject.transform.localRotation = Quaternion.RotateTowards(newObject.transform.localRotation, Quaternion.identity, smoothedCounter / itemSwapSpeed);
+            heldObject.transform.rotation = Quaternion.Slerp(heldObject.transform.rotation, Quaternion.identity, smoothedCounter / itemSwapSpeed);
             yield return null;
         }
 
