@@ -29,6 +29,10 @@ public class SC_ObjectHolding : MonoBehaviour
         newObject.GetComponent<Collider>().enabled = false;
         swapPosition = newObject.transform.position;
 
+        // Reset both objects rotations
+        newObject.transform.localRotation = Quaternion.identity;
+        heldObject.transform.rotation = Quaternion.identity;
+
         // Start the swap
         swapping = true;
         moveRoutine = StartCoroutine("MoveObjects");
@@ -42,9 +46,6 @@ public class SC_ObjectHolding : MonoBehaviour
             heldObject.transform.localPosition = Vector3.Lerp(heldObject.transform.localPosition, swapPosition, smoothedCounter / itemSwapSpeed); // Move the held object to where the selected object was taken from
             newObject.transform.localPosition = Vector3.Lerp(newObject.transform.localPosition, Vector3.zero, smoothedCounter / itemSwapSpeed); // Move the selected object to the hold point
 
-            // Realign both objects rotations
-            newObject.transform.localRotation = Quaternion.RotateTowards(newObject.transform.localRotation, Quaternion.identity, smoothedCounter / itemSwapSpeed);
-            heldObject.transform.rotation = Quaternion.Slerp(heldObject.transform.rotation, Quaternion.identity, smoothedCounter / itemSwapSpeed);
             yield return null;
         }
 
@@ -53,6 +54,7 @@ public class SC_ObjectHolding : MonoBehaviour
 
     void SwapObjects() {
         StopCoroutine(moveRoutine);
+        
         swapping = false;
         counter = 0f;
         heldObject = newObject;

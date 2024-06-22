@@ -4,15 +4,71 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public static UIManager instance;
+
+    string uiState = "";
+
+    [SerializeField] List<GameObject> canvases = new List<GameObject>();
+    [SerializeField] List<string> canvasNames = new List<string>();
+
+    Dictionary<string, GameObject> canvasDict = new Dictionary<string, GameObject>();
+
+    void Awake() {
+        instance = this;
+
+        // Store all of the canvases in the dictionary
+        for (int i = 0; i < canvases.Count; i++) { 
+            canvasDict.Add(canvasNames[i], canvases[i]);
+        }
+
+        GameManager.pauseGame += PauseHandler;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnDestroy() {
+        GameManager.pauseGame -= PauseHandler;
+    }
+
+    public void ToggleCanvas(string canvasName) {
+        // Loop through all of the canvases in the dictionary and activate the given one
+        foreach (KeyValuePair<string, GameObject> pair in canvasDict) {
+            if (pair.Key.Equals(canvasName)) {
+                pair.Value.SetActive(true);
+            } else {
+                pair.Value.SetActive(false);
+            }
+        }
+    }
+
+    // Activate the stored canvas
+    public void ResumeUIState() {
+        ToggleCanvas(uiState);
+    }
+
+    // Store the current activated canvas so it can be reactivated at a later time
+    public void StoreUIState() {
+        foreach (KeyValuePair<string, GameObject> pair in canvasDict) {
+            if (pair.Value.activeInHierarchy) {
+                uiState = pair.Key;
+            }
+        }
+    }
+
+    void PauseHandler(bool isPaused) {
+        if (isPaused) { // If the game is paused:
+            // Store the current UI state and show the pause canvas
+            StoreUIState();
+            ToggleCanvas("pause");
+
+            if (!InputReader.instance.usingJoystick) { // Unlock the cursor if the player isn't using a controller
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+        } else { // If the game is resumed:
+            ResumeUIState(); // Resume the stored UI state
+
+            // Lock cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }

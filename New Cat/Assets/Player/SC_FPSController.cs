@@ -28,18 +28,25 @@ public class SC_FPSController : MonoBehaviour
 
     [HideInInspector]
     public bool canMove = true;
+    public bool canLook = true;
+    bool moveState = true;
+    bool lookState = true;
 
-    void Start()
-    {
+    void Start() {
         characterController = GetComponent<CharacterController>();
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        GameManager.pauseGame += PauseHandler;
     }
 
-    void Update()
-    {
+    void OnDestroy() {
+        GameManager.pauseGame -= PauseHandler;
+    }
+
+    void Update() {
         // Realign forward and right vectors based on current direction
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -66,11 +73,34 @@ public class SC_FPSController : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
 
         // Player and Camera rotation
-        if (canMove) {
+        if (canLook) {
             rotationX += -InputReader.instance.mouseVector.y * lookSpeed; // Adjust the mouse input by the look speed
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit); // Make sure the rotation doesn't exceed the look limit
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0); // Rotate the camera around the x axis
             transform.rotation *= Quaternion.Euler(0, InputReader.instance.mouseVector.x * lookSpeed, 0); // Rotate the player around the y axis
+        }
+    }
+
+    // Store the player state and lock them
+    void LockPlayer() {
+        moveState = canMove;
+        lookState = canLook;
+
+        canMove = false;
+        canLook = false;
+    }
+
+    // Restore the player to their previous state
+    void UnlockPlayer() {
+        canMove = moveState;
+        canLook = lookState;
+    }
+
+    void PauseHandler(bool isPaused) {
+        if (isPaused) {
+            LockPlayer();
+        } else {
+            UnlockPlayer();
         }
     }
 }

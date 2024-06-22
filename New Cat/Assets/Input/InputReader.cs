@@ -22,7 +22,7 @@ public class InputReader : MonoBehaviour
     [SerializeField] float snappiness = 10.0f; // larger values of this cause less filtering, more responsiveness
     [Tooltip("Increases the look speed when using a joystick")]
     [SerializeField] float joystickLookFactor;
-    bool usingJoystick = false;
+    public bool usingJoystick = false;
 
     [Header("Rewired")]
     // The Rewired player id of this character
