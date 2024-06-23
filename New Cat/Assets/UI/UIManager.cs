@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
 
     Dictionary<string, GameObject> canvasDict = new Dictionary<string, GameObject>();
 
+    [SerializeField] string uiLoadTo = "";
+
     void Awake() {
         instance = this;
 
@@ -22,6 +24,12 @@ public class UIManager : MonoBehaviour
         }
 
         GameManager.pauseGame += PauseHandler;
+
+        if (uiLoadTo.Length <= 0) {
+            ToggleCanvas("main menu");
+        } else {
+            ToggleCanvas(uiLoadTo);
+        }
     }
 
     void OnDestroy() {
@@ -29,13 +37,21 @@ public class UIManager : MonoBehaviour
     }
 
     public void ToggleCanvas(string canvasName) {
+        bool flag = false;
+
         // Loop through all of the canvases in the dictionary and activate the given one
         foreach (KeyValuePair<string, GameObject> pair in canvasDict) {
             if (pair.Key.Equals(canvasName)) {
+                flag = true;
                 pair.Value.SetActive(true);
             } else {
                 pair.Value.SetActive(false);
             }
+        }
+
+        // Set the canvas to the main menu if the correct canvas was not found
+        if (!flag) {
+            ToggleCanvas("main menu");
         }
     }
 

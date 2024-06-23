@@ -9,6 +9,9 @@ public class PlayerInteraction : MonoBehaviour
     
     [Header("State Variables")]
     GameObject objectInRange = null;
+    [HideInInspector]
+    public bool isInRange = false;
+    public bool isAvailable = false;
     bool canInteract = true;
 
     [Header("References")]
@@ -35,7 +38,8 @@ public class PlayerInteraction : MonoBehaviour
                 ProcessRaycast(hit);
             } else { // If there isn't anything, empty the object in range and reset the crosshair
                 objectInRange = null;
-                HUDManager.instance.SetCrosshair(false, false);
+                isInRange = false;
+                isAvailable = false;
             }
         }
         
@@ -51,13 +55,16 @@ public class PlayerInteraction : MonoBehaviour
             objectInRange = hitObject;
 
             if (hitObject.GetComponent<SC_Interact>().Available) { // Set the crosshair according to interact availability
-                HUDManager.instance.SetCrosshair(true, true);
+                isInRange = true;
+                isAvailable = true;
             } else {
-                HUDManager.instance.SetCrosshair(true, false);
+                isInRange = true;
+                isAvailable = false;
             }
         } else { // If the object is not an interactable, empty the object in range and reset the crosshair
             objectInRange = null;
-            HUDManager.instance.SetCrosshair(false, false);
+            isInRange = false;
+            isAvailable = false;
         }
     }
 

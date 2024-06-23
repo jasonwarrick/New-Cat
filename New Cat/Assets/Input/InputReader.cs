@@ -30,10 +30,14 @@ public class InputReader : MonoBehaviour
     private Player player; // The Rewired Player
 
     void Awake() {
-        instance = this;
+        
 
         // Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
         player = ReInput.players.GetPlayer(playerId);
+    }
+
+    void OnEnable() {
+        instance = this;
     }
 
     void Update () {

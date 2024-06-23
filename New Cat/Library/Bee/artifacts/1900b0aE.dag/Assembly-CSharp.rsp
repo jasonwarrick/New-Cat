@@ -366,7 +366,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/GameManager/GameManager.cs"
 "Assets/Input/InputReader.cs"
 "Assets/Interactables/SC_Interact.cs"
 "Assets/Player/SC_FPSController.cs"
@@ -414,8 +413,12 @@
 "Assets/Rewired/Internal/Scripts/DataStorage/UserDataStore_PlayerPrefs.cs"
 "Assets/Rewired/Internal/Scripts/InputManager.cs"
 "Assets/Rewired/Internal/Scripts/Misc/ExternalTools.cs"
+"Assets/System/GameManager.cs"
+"Assets/System/SaveOnLoad.cs"
+"Assets/System/SceneHandler.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 "Assets/UI/HUD/HUDManager.cs"
+"Assets/UI/MainMenu/MainMenuManager.cs"
 "Assets/UI/UIManager.cs"
 -langversion:9.0
 

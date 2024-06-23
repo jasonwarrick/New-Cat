@@ -11,16 +11,29 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject unavailableCross;
 
     GameObject[] crosshairs = new GameObject[3];
+    PlayerInteraction playerInteraction;
 
     void Awake() {
-        instance = this;
-
         crosshairs[0] = defaultCross;
         crosshairs[1] = availableCross;
         crosshairs[2] = unavailableCross;
     }
 
-    public void SetCrosshair(bool inRange, bool isAvailable) {
+    void OnEnable() {
+        instance = this;
+
+        playerInteraction = FindObjectOfType<PlayerInteraction>();
+    }
+
+    void Update() {
+        if (playerInteraction != null) {
+            SetCrosshair(playerInteraction.isInRange, playerInteraction.isAvailable);
+        } else {
+            playerInteraction = FindObjectOfType<PlayerInteraction>();
+        }
+    }
+
+    void SetCrosshair(bool inRange, bool isAvailable) {
         if (inRange && isAvailable) {
             ToggleCrosshairs(1);
         } else if (inRange) {
