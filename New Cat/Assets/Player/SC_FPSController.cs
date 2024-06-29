@@ -32,7 +32,10 @@ public class SC_FPSController : MonoBehaviour
     bool moveState = true;
     bool lookState = true;
 
-    void Start() {
+    void Awake() {
+        if (CameraManager.instance != null) {
+            CameraManager.instance.DisableNPCamera();
+        }
         characterController = GetComponent<CharacterController>();
 
         // Lock cursor

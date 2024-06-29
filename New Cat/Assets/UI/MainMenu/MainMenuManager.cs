@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
+    UIManager uiManager;
+    GameManager gameManager;
+    
+    void Awake() {
+        uiManager = transform.parent.GetComponent<UIManager>();
+        gameManager = GameManager.instance;
+    }
+
     public void Pressed_PlayGame() {
-        SceneHandler.instance.LoadGame();
+        gameManager.StartGame();
     }
 
     public void Pressed_Settings() {
