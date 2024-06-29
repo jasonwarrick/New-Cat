@@ -38,6 +38,7 @@ public class InputReader : MonoBehaviour
 
     void OnEnable() {
         instance = this;
+        Debug.Log("Set instance");
     }
 
     void Update () {

@@ -419,6 +419,7 @@
 "Assets/TutorialInfo/Scripts/Readme.cs"
 "Assets/UI/HUD/HUDManager.cs"
 "Assets/UI/MainMenu/MainMenuManager.cs"
+"Assets/UI/Pause/PauseManager.cs"
 "Assets/UI/UIManager.cs"
 -langversion:9.0
 

@@ -42,6 +42,10 @@ public class SC_FPSController : MonoBehaviour
         GameManager.pauseGame += PauseHandler;
     }
 
+    void OnEnable() {
+        Debug.Log(InputReader.instance == null);
+    }
+
     void OnDestroy() {
         GameManager.pauseGame -= PauseHandler;
     }
@@ -79,6 +83,8 @@ public class SC_FPSController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0); // Rotate the camera around the x axis
             transform.rotation *= Quaternion.Euler(0, InputReader.instance.mouseVector.x * lookSpeed, 0); // Rotate the player around the y axis
         }
+
+        // Debug.Log(moveDirection);
     }
 
     // Store the player state and lock them

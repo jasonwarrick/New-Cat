@@ -9,6 +9,8 @@ public class SceneHandler : MonoBehaviour
 
     void Start() {
         instance = this;
+
+        DontDestroyOnLoad(this);
     }
 
     public void LoadMainMenu() {
@@ -19,5 +21,10 @@ public class SceneHandler : MonoBehaviour
     public void LoadGame() {
         SceneManager.LoadScene("SampleScene");
         UIManager.instance.ToggleCanvas("hud");
+    }
+
+    public void QuitGame() {
+        Debug.Log("Quit game");
+        Application.Quit();
     }
 }

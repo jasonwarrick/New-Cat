@@ -10,7 +10,8 @@ public class SaveOnLoad : MonoBehaviour
         DontDestroyOnLoad(transform.parent.gameObject);
     }
 
-    void Awake() {
+    void OnEnable() {
+        Debug.Log("Check for dupes");
         SaveOnLoad[] opposingObjects = FindObjectsOfType<SaveOnLoad>();
         foreach (SaveOnLoad opposingObject in opposingObjects) {
             if (opposingObject.transform.parent.gameObject.name.Equals(this.transform.parent.gameObject.name) && !rootObject && opposingObject.transform.parent.gameObject != this.transform.parent.gameObject) {
