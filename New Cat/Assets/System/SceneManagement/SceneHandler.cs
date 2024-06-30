@@ -54,4 +54,8 @@ public class SceneHandler : MonoBehaviour
         Debug.Log("Quit game");
         Application.Quit();
     }
+
+    public void LoadMinigame(string minigameName) {
+        AdditiveLoadScene(minigameName);
+    }
 }

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Camera/Scene_Camera.unity
     guid: 0fb487af88c94b343a9ebad25e69dbf1
+  - enabled: 1
+    path: Assets/Interactables/MinigameScenes/Scene_Minigame_Test.unity
+    guid: 2015c5346971c0c418cc26f9706d693d
   m_configObjects: {}

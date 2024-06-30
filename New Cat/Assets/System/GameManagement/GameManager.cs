@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static E_PauseGame pauseGame;
 
     bool isPaused = false;
+    bool isInMinigame = false;
     GameObject heldObject = null;
     public GameObject HeldObject {
         get { return heldObject; }
@@ -43,5 +44,10 @@ public class GameManager : MonoBehaviour
     public void StartGame() {
         SceneHandler.instance.LoadGame();
         UIManager.instance.ToggleCanvas("hud");
+    }
+
+    public void StartMinigame(string minigameName) {
+        SceneHandler.instance.LoadMinigame(minigameName);
+        isInMinigame = true;
     }
 }

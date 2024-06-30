@@ -372,7 +372,6 @@
 "Assets/Interactables/BasePickup/SC_Pickup.cs"
 "Assets/Interactables/I_Interact.cs"
 "Assets/Player/SC_FPSController.cs"
-"Assets/Player/SC_FPSLook.cs"
 "Assets/Player/SC_ObjectHolding.cs"
 "Assets/Player/SC_PlayerInteract.cs"
 "Assets/Rewired/Extras/ControlMapper/Examples/ControlMapperDemo/Scripts/ControlMapperDemoMessage.cs"

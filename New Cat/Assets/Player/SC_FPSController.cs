@@ -97,10 +97,6 @@ public class SC_FPSController : MonoBehaviour
 
     // Store the player state and lock them
     public void LockPlayer() {
-        if (canMove == false && canLook == false) { 
-            UnlockPlayer();
-            return;
-        }
         moveState = canMove;
         lookState = canLook;
 

@@ -19,6 +19,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     [SerializeField] GameObject requiredObject;
+    [SerializeField] string minigameSceneName;
 
     GameManager gameManager;
     Transform playerCamera;
@@ -42,6 +43,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         Debug.Log("Interacted");
 
         SC_FPSController.instance.LockPlayer();
+        GameManager.instance.StartMinigame(minigameSceneName);
         // playerCamera.position = minigameCameraPosition.position;
 
         return available;

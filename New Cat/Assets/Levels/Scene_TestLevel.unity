@@ -670,6 +670,7 @@ MonoBehaviour:
   available: 0
   type: 2
   requiredObject: {fileID: 611373198}
+  minigameSceneName: Scene_Minigame_Test
   minigameCameraPosition: {fileID: 1405852271}
 --- !u!1 &1169946830
 GameObject:
