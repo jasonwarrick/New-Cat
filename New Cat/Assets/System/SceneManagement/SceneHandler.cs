@@ -9,12 +9,17 @@ public class SceneHandler : MonoBehaviour
 
     public List<string> loadedScenes = new List<string>();
 
+    [Header("Debugging")]
+    [SerializeField] bool testScene;
+
     void Awake() {
         DontDestroyOnLoad(this);
 
         instance = this;
         
-        AdditiveLoadScene("Scene_UI");
+        if (!testScene) {
+            AdditiveLoadScene("Scene_UI");
+        }
     }
 
     // Load the indicated scene additively, and add it to the list of loaded scenes

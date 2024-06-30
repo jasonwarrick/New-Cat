@@ -51,10 +51,10 @@ public class PlayerInteraction : MonoBehaviour
     void ProcessRaycast(RaycastHit hit) { // Set the correct object references and flags based on what is hit by the raycast
         GameObject hitObject = hit.transform.gameObject;
         
-        if (hitObject.layer == interactLayer && hitObject.GetComponent<SC_Interact>() != null) { // If the hit object is interactable
+        if (hitObject.layer == interactLayer && hitObject.GetComponent<I_Interact>() != null) { // If the hit object is interactable
             objectInRange = hitObject;
 
-            if (hitObject.GetComponent<SC_Interact>().Available) { // Set the crosshair according to interact availability
+            if (hitObject.GetComponent<I_Interact>().Available) { // Set the crosshair according to interact availability
                 isInRange = true;
                 isAvailable = true;
             } else {
@@ -70,8 +70,8 @@ public class PlayerInteraction : MonoBehaviour
 
     void Interact() {
         if (objectInRange != null) {
-            if (objectInRange.GetComponent<SC_Interact>().Available) { // Nested if statements for future implementation of fail noises
-                switch (objectInRange.GetComponent<SC_Interact>().Type) { // Perform the correct interaction method based on the object's type
+            if (objectInRange.GetComponent<I_Interact>().Available) { // Nested if statements for future implementation of fail noises
+                switch (objectInRange.GetComponent<I_Interact>().Type) { // Perform the correct interaction method based on the object's type
                     case 1: // Pickup
                         objectHolding.GrabObject(objectInRange);
                         break;

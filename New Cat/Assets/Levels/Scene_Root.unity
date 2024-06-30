@@ -131,10 +131,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2431148040137234268, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
+        type: 3}
+      propertyPath: testScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6318734621551657733, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
       propertyPath: m_Name
       value: SystemManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318734621551657733, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9038929001259950418, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
@@ -253,6 +263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CameraManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953878072979985794, guid: 0458a4c82db12174292d935e7d877713,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

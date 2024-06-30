@@ -144,7 +144,7 @@ PrefabInstance:
     - target: {fileID: 7028793905200036296, guid: 374bb7b406186194e9bc7763c48387ff,
         type: 3}
       propertyPath: uiLoadTo
-      value: 
+      value: hud
       objectReference: {fileID: 0}
     - target: {fileID: 7301014605775937054, guid: 374bb7b406186194e9bc7763c48387ff,
         type: 3}
