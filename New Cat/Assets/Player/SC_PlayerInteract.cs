@@ -86,6 +86,8 @@ public class PlayerInteraction : MonoBehaviour
                         Debug.Log("Not a valid interact type");
                         break;
                 }
+            } else {
+                Debug.Log("Interact is not available");
             }
         } else {
             // Debug.Log("Nothing to interact with");

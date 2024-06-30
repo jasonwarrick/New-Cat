@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public static E_PauseGame pauseGame;
 
     bool isPaused = false;
+    GameObject heldObject = null;
+    public GameObject HeldObject {
+        get { return heldObject; }
+        set { heldObject = value;}
+    }
 
     void Awake() {
         instance = this;

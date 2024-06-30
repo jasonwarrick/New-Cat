@@ -59,5 +59,7 @@ public class SC_ObjectHolding : MonoBehaviour
         counter = 0f;
         heldObject = newObject;
         newObject = null;
+
+        GameManager.instance.HeldObject = heldObject;
     }
 }
