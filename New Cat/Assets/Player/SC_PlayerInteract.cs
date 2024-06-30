@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class SC_PlayerInteract : MonoBehaviour
 {
     [Header("Interaction Variables")]
     [SerializeField] float interactDistance;
@@ -19,7 +19,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] LayerMask interactLayerMask;
     [SerializeField] int interactLayer;
     Camera cam;
-    SC_ObjectHolding objectHolding;
+    public SC_ObjectHolding objectHolding;
     
     void Start() {
         cam = GetComponentInChildren<Camera>();
@@ -70,22 +70,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void Interact() {
         if (objectInRange != null) {
-            if (objectInRange.GetComponent<I_Interact>().Available) { // Nested if statements for future implementation of fail noises
-                switch (objectInRange.GetComponent<I_Interact>().Type) { // Perform the correct interaction method based on the object's type
-                    case 1: // Pickup
-                        objectHolding.GrabObject(objectInRange);
-                        break;
-
-                    case 2: // Minigame
-                        break;
-                    
-                    case 3: // Environment object
-                        break;
-
-                    default:
-                        Debug.Log("Not a valid interact type");
-                        break;
-                }
+            I_Interact objectInteract = objectInRange.GetComponent<I_Interact>();
+            if (objectInteract.Available) { // Nested if statements for future implementation of fail noises
+                objectInteract.Interact(this);
             } else {
                 Debug.Log("Interact is not available");
             }

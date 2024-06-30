@@ -9,6 +9,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class SC_FPSController : MonoBehaviour
 {
+    public static SC_FPSController instance;
+
     [Header("Movement Variables")]
     [SerializeField] float walkingSpeed = 7.5f;
     [SerializeField] float runningSpeed = 11.5f;
@@ -33,9 +35,12 @@ public class SC_FPSController : MonoBehaviour
     bool lookState = true;
 
     void Awake() {
+        instance = this;
+
         if (CameraManager.instance != null) {
             CameraManager.instance.DisableNPCamera();
         }
+
         characterController = GetComponent<CharacterController>();
 
         // Lock cursor
@@ -91,7 +96,11 @@ public class SC_FPSController : MonoBehaviour
     }
 
     // Store the player state and lock them
-    void LockPlayer() {
+    public void LockPlayer() {
+        if (canMove == false && canLook == false) { 
+            UnlockPlayer();
+            return;
+        }
         moveState = canMove;
         lookState = canLook;
 

@@ -18,7 +18,11 @@ public class SC_Pickup : MonoBehaviour, I_Interact
         set { type = value; }
     }
 
-    public bool Interact() {
-        throw new System.NotImplementedException();
+    public bool Interact(SC_PlayerInteract playerInteract) {
+        if (!available) { return available;}
+
+        playerInteract.objectHolding.GrabObject(this.gameObject);
+        
+        return available;
     }
 }

@@ -21,13 +21,29 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     [SerializeField] GameObject requiredObject;
 
     GameManager gameManager;
+    Transform playerCamera;
+    [SerializeField] Transform minigameCameraPosition;
+    float playerCameraHeight = 0f;
+
+    void Start() {
+        playerCamera = SC_FPSController.instance.transform.gameObject.GetComponentInChildren<Camera>().transform;
+        playerCameraHeight = playerCamera.position.y;
+        // Debug.Log(playerController);
+    }
 
     void Update() {
         available = GameManager.instance.HeldObject == requiredObject; // Set the minigame availability to true if the held object matches the required object
         // Might need to add functionality to change availability according to additional factors
     }
 
-    public bool Interact() {
-        throw new System.NotImplementedException();
+    public bool Interact(SC_PlayerInteract playerInteract) {
+        if (!available) { Debug.Log("returned from interact early"); return available; }
+
+        Debug.Log("Interacted");
+
+        SC_FPSController.instance.LockPlayer();
+        // playerCamera.position = minigameCameraPosition.position;
+
+        return available;
     }
 }

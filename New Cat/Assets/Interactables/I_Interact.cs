@@ -8,5 +8,5 @@ public interface I_Interact
     public bool Available { get; set;}
     public int Type { get; set; }
 
-    bool Interact();
+    bool Interact(SC_PlayerInteract playerInteract);
 }
