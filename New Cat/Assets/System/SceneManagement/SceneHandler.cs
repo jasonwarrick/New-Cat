@@ -58,4 +58,8 @@ public class SceneHandler : MonoBehaviour
     public void LoadMinigame(string minigameName) {
         AdditiveLoadScene(minigameName);
     }
+
+    public void UnloadMinigame(string minigameName) {
+        UnloadScene(minigameName);
+    }
 }

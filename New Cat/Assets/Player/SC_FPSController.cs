@@ -105,7 +105,7 @@ public class SC_FPSController : MonoBehaviour
     }
 
     // Restore the player to their previous state
-    void UnlockPlayer() {
+    public void UnlockPlayer() {
         canMove = moveState;
         canLook = lookState;
     }

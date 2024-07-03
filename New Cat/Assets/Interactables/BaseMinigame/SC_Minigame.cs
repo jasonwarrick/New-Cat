@@ -35,10 +35,14 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     void Update() {
         available = GameManager.instance.HeldObject == requiredObject; // Set the minigame availability to true if the held object matches the required object
         // Might need to add functionality to change availability according to additional factors
+
+        if (InputReader.instance.exit) {
+            ExitMinigame();
+        }
     }
 
     public bool Interact(SC_PlayerInteract playerInteract) {
-        if (!available) { Debug.Log("returned from interact early"); return available; }
+        if (!available) { Debug.Log("Minigame is not available"); return available; }
 
         Debug.Log("Interacted");
 
@@ -47,5 +51,12 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         // playerCamera.position = minigameCameraPosition.position;
 
         return available;
+    }
+
+    void ExitMinigame() {
+        if (GameManager.instance.isInMinigame) {
+            SC_FPSController.instance.UnlockPlayer();
+            GameManager.instance.StopMinigame(minigameSceneName);
+        }
     }
 }

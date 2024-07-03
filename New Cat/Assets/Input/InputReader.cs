@@ -16,6 +16,7 @@ public class InputReader : MonoBehaviour
     public Vector2 mouseVector = new Vector2(0f, 0f);
     public bool interact = false;
     public bool pause = false;
+    public bool exit = false;
 
     [Header("Input Behavior Variables")]
     [Tooltip("Filters and smooths mouse input; larger values = less filtering and jerkier movement")]
@@ -67,6 +68,7 @@ public class InputReader : MonoBehaviour
 
         interact = player.GetButtonDown("Interact");
         pause = player.GetButtonDown("Pause");
+        exit = player.GetButtonDown("Exit");
     }
 
     void ProcessInput() {
