@@ -19,7 +19,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     [SerializeField] GameObject requiredObject;
-    [SerializeField] string minigameSceneName;
+    public string minigameSceneName;
 
     GameManager gameManager;
     Transform playerCamera;
@@ -27,9 +27,10 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     float playerCameraHeight = 0f;
 
     void Start() {
-        playerCamera = SC_FPSController.instance.transform.gameObject.GetComponentInChildren<Camera>().transform;
+        playerCamera = FindObjectOfType<Camera>().transform;
         playerCameraHeight = playerCamera.position.y;
-        // Debug.Log(playerController);
+
+        GameManager.instance.InitializeMinigame(minigameSceneName);
     }
 
     void Update() {

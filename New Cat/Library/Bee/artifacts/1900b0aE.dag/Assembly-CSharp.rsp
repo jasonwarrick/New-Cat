@@ -371,6 +371,7 @@
 "Assets/Interactables/BaseMinigame/SC_Minigame.cs"
 "Assets/Interactables/BasePickup/SC_Pickup.cs"
 "Assets/Interactables/I_Interact.cs"
+"Assets/Interactables/MinigameScenes/SC_MinigameSetup.cs"
 "Assets/Player/SC_FPSController.cs"
 "Assets/Player/SC_ObjectHolding.cs"
 "Assets/Player/SC_PlayerInteract.cs"

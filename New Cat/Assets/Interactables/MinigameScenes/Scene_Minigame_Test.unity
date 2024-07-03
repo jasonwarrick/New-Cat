@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514410243}
+  - component: {fileID: 1514410244}
   m_Layer: 0
   m_Name: MinigameRoot
   m_TagString: Untagged
@@ -155,6 +156,19 @@ Transform:
   - {fileID: 1749433119}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514410244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514410242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12fc972eccdb3fd4ba8e96e3cfe0f0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minigameSceneName: Scene_Minigame_Test
 --- !u!1 &1749433118
 GameObject:
   m_ObjectHideFlags: 0

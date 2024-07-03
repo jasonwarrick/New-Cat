@@ -47,12 +47,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void StartMinigame(string minigameName) {
-        SceneHandler.instance.LoadMinigame(minigameName);
+        
         isInMinigame = true;
     }
 
     public void StopMinigame(string minigameName) {
-        SceneHandler.instance.UnloadMinigame(minigameName);
+        
         isInMinigame = false;
+    }
+    
+    public void InitializeMinigame(string minigameName) {
+        SceneHandler.instance.LoadMinigame(minigameName);
     }
 }

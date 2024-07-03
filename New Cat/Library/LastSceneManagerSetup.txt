@@ -1,17 +1,9 @@
 sceneSetups:
 - path: Assets/Levels/Scene_TestLevel.unity
   isLoaded: 1
-  isActive: 1
-  isSubScene: 0
-- path: Assets/Levels/Scene_Root.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/UI/Scene_UI.unity
-  isLoaded: 1
   isActive: 0
   isSubScene: 0
 - path: Assets/Player/Scene_Player.unity
   isLoaded: 1
-  isActive: 0
+  isActive: 1
   isSubScene: 0
