@@ -6,16 +6,13 @@ using UnityEngine;
     Code adapted from: https://www.sharpcoderblog.com/blog/unity-3d-fps-controller
 **/
 
-[RequireComponent(typeof(CharacterController))]
+// [RequireComponent(typeof(CharacterController))]
 public class SC_FPSController : MonoBehaviour
 {
     public static SC_FPSController instance;
 
     [Header("Movement Variables")]
     [SerializeField] float walkingSpeed = 7.5f;
-    [SerializeField] float runningSpeed = 11.5f;
-    [SerializeField] float gravity = 20.0f;
-    
 
     [Header("Camera Control Variables")]
     [SerializeField] float lookSpeed = 2.0f;
@@ -23,9 +20,8 @@ public class SC_FPSController : MonoBehaviour
 
     [Header("References")]
     public Camera playerCamera;
-    CharacterController characterController;
+    Rigidbody rb;
     Vector3 moveDirection = Vector3.zero;
-    Vector2 adjustedMoveVector = Vector2.zero;
     float rotationX = 0;
 
     [HideInInspector]
@@ -41,7 +37,7 @@ public class SC_FPSController : MonoBehaviour
             CameraManager.instance.DisableNPCamera();
         }
 
-        characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -59,31 +55,11 @@ public class SC_FPSController : MonoBehaviour
     }
 
     void Update() {
-        // Realign forward and right vectors based on current direction
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-        
-        bool isRunning = Input.GetKey(KeyCode.LeftShift); // Press Left Shift to run
+        MovePlayer();
+        RotatePlayer();
+    }
 
-        adjustedMoveVector = InputReader.instance.moveVector.normalized; // Normalize the movement vector
-
-        // Set the current speed based on whether or not the player can move and is running (if can move => if is running => set walk or run speed => if not moving, set speed to zero)
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * adjustedMoveVector.y : 0; 
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * adjustedMoveVector.x : 0;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY); // Set the direction of movement to the proper direciton at the current speed
-
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        if (!characterController.isGrounded) {
-            moveDirection.y -= gravity * Time.deltaTime;
-        } else { // Stop y-movement if the player is grounded
-            moveDirection.y = 0f;
-        }
-
-        // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
-
+    void RotatePlayer() {
         // Player and Camera rotation
         if (canLook) {
             rotationX += -InputReader.instance.mouseVector.y * lookSpeed; // Adjust the mouse input by the look speed
@@ -91,8 +67,25 @@ public class SC_FPSController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0); // Rotate the camera around the x axis
             transform.rotation *= Quaternion.Euler(0, InputReader.instance.mouseVector.x * lookSpeed, 0); // Rotate the player around the y axis
         }
+    }
 
-        // Debug.Log(moveDirection);
+    void MovePlayer() {
+        Vector2 baseMoveVector = InputReader.instance.moveVector.normalized; // Normalize the input vector
+
+        // Get the current forward and right vectors
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+
+        // Get the intended x and (z) speeds
+        float curSpeedX = walkingSpeed * baseMoveVector.y;
+        float curSpeedY = walkingSpeed * baseMoveVector.x;
+
+        // Align those speeds to the forward and right vectors, and maintain y velocity
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        moveDirection.y = rb.velocity.y;
+
+        // Set the current velocity to the move direction
+        rb.velocity = moveDirection;
     }
 
     // Store the player state and lock them
