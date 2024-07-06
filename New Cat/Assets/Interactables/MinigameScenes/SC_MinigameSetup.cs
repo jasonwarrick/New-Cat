@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class SC_MinigameSetup : MonoBehaviour
 {
-    GameObject playerCam;
+    [SerializeField] float positionOffset = 2f;
+
+    Transform playerCam;
     public string minigameSceneName = "";
+    SC_Minigame minigameScript;
 
     void Awake() {
-        playerCam = FindObjectOfType<Camera>().gameObject;
+        playerCam = FindObjectOfType<Camera>().transform;
 
         SC_Minigame[] minigames = FindObjectsOfType<SC_Minigame>();
 
@@ -16,6 +19,7 @@ public class SC_MinigameSetup : MonoBehaviour
 
         foreach(SC_Minigame minigame in minigames) {
             if (minigame.minigameSceneName == minigameSceneName) {
+                minigameScript = minigame;
                 transform.parent = minigame.transform;
                 minigame.minigameSetup = this;
             }
@@ -24,7 +28,15 @@ public class SC_MinigameSetup : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void OnEnable() {
-        transform.position = playerCam.transform.position;
+    void OnEnable() { // Set parent to the camera and move it along the z-axis
+        transform.parent = playerCam;
+        transform.rotation = playerCam.rotation;
+        transform.localPosition = new Vector3(0f, 0f, positionOffset);
+    }
+
+    public void TurnOffSetup() { // Reset the parent to the mingame object and turn the minigame off
+        transform.parent = minigameScript.transform;
+        transform.localPosition = Vector3.zero;
+        gameObject.SetActive(false);
     }
 }
