@@ -111,6 +111,8 @@ public class SC_FPSController : MonoBehaviour
     }
 
     void PauseHandler(bool isPaused) {
+        if (GameManager.instance.isInMinigame) { return; }
+        
         if (isPaused) {
             LockPlayer();
         } else {

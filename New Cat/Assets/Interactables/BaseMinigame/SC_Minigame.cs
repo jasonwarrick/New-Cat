@@ -23,6 +23,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
     GameManager gameManager;
     Transform playerCamera;
+    public SC_MinigameSetup minigameSetup;
     [SerializeField] Transform minigameCameraPosition;
     float playerCameraHeight = 0f;
 
@@ -49,6 +50,10 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
         SC_FPSController.instance.LockPlayer();
         GameManager.instance.StartMinigame(minigameSceneName);
+
+        if (minigameSetup != null) {
+            minigameSetup.gameObject.SetActive(true);
+        }
         // playerCamera.position = minigameCameraPosition.position;
 
         return available;
@@ -58,6 +63,10 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         if (GameManager.instance.isInMinigame) {
             SC_FPSController.instance.UnlockPlayer();
             GameManager.instance.StopMinigame(minigameSceneName);
+
+            if (minigameSetup != null) {
+                minigameSetup.gameObject.SetActive(false);
+            }
         }
     }
 }

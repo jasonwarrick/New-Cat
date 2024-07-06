@@ -17,6 +17,7 @@ public class SC_MinigameSetup : MonoBehaviour
         foreach(SC_Minigame minigame in minigames) {
             if (minigame.minigameSceneName == minigameSceneName) {
                 transform.parent = minigame.transform;
+                minigame.minigameSetup = this;
             }
         }
 

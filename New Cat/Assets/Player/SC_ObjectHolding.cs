@@ -16,14 +16,13 @@ public class SC_ObjectHolding : MonoBehaviour
     Coroutine moveRoutine;
 
     public void GrabObject(GameObject inObject) {
-        if (inObject == null) { return; } // Catch any erroneous calls
+        if (inObject == null) { return; } // Catch any erroneous calls or calls that occur while paused
         if (swapping) { SwapObjects(); } // If the items are already swapping, stop the current swap so the new one can start
 
         // Reset the parent of the currently held object to that of the gameObjects parent
         heldObject.transform.parent = gameObjects;
-        heldObject.GetComponent<Collider>().enabled = true;
 
-        // Do the same for the item that is being selected, as well as storing its position
+        // Do the same for the item that is being selected, as well as storing its position and turning off collision
         newObject = inObject;
         newObject.transform.parent = transform;
         newObject.GetComponent<Collider>().enabled = false;
@@ -55,6 +54,7 @@ public class SC_ObjectHolding : MonoBehaviour
     void SwapObjects() {
         StopCoroutine(moveRoutine);
         
+        heldObject.GetComponent<Collider>().enabled = true; // Turn the collision for the held object back on
         swapping = false;
         counter = 0f;
         heldObject = newObject;

@@ -24,6 +24,8 @@ public class SC_PlayerInteract : MonoBehaviour
     void Start() {
         cam = GetComponentInChildren<Camera>();
         objectHolding = holdPoint.GetComponentInChildren<SC_ObjectHolding>();
+
+        GameManager.instance.playerInteract = this;
     }
 
     public void SetCanInteract(bool newCanInteract) {
@@ -43,7 +45,7 @@ public class SC_PlayerInteract : MonoBehaviour
             }
         }
         
-        if (InputReader.instance.interact) {
+        if (InputReader.instance.interact && canInteract) {
             Interact();
         }
     }

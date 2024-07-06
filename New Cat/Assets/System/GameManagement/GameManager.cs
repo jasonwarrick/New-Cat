@@ -9,13 +9,15 @@ public class GameManager : MonoBehaviour
     public delegate void E_PauseGame(bool isPaused);
     public static E_PauseGame pauseGame;
 
-    bool isPaused = false;
+    public bool isPaused = false;
     public bool isInMinigame = false;
     GameObject heldObject = null;
     public GameObject HeldObject {
         get { return heldObject; }
         set { heldObject = value;}
     }
+
+    public SC_PlayerInteract playerInteract;
 
     void Awake() {
         instance = this;
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame() {
         isPaused = !isPaused;
+        SetPlayerCanInteract();
 
         if (isPaused) { // If the game is being paused:
             pauseGame.Invoke(isPaused); // Trigger the pause event
@@ -41,19 +44,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void SetPlayerCanInteract() {
+        playerInteract.SetCanInteract(!isInMinigame && !isPaused);
+    }
+
     public void StartGame() {
         SceneHandler.instance.LoadGame();
         UIManager.instance.ToggleCanvas("hud");
     }
 
     public void StartMinigame(string minigameName) {
-        
         isInMinigame = true;
+        SetPlayerCanInteract();
     }
 
     public void StopMinigame(string minigameName) {
-        
         isInMinigame = false;
+        SetPlayerCanInteract();
     }
     
     public void InitializeMinigame(string minigameName) {

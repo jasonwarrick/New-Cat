@@ -47,7 +47,6 @@ public class SceneHandler : MonoBehaviour
 
     public void LoadGame() {
         AdditiveLoadScene("TestLevel");
-        AdditiveLoadScene("Scene_Player");
     }
 
     public void QuitGame() {
