@@ -12,6 +12,7 @@ public class SC_FPSController : MonoBehaviour
     public static SC_FPSController instance;
 
     [Header("Movement Variables")]
+    [SerializeField] float walkingForce = 10f;
     [SerializeField] float walkingSpeed = 7.5f;
 
     [Header("Camera Control Variables")]
@@ -20,8 +21,8 @@ public class SC_FPSController : MonoBehaviour
 
     [Header("References")]
     public Camera playerCamera;
-    Rigidbody rb;
     Vector3 moveDirection = Vector3.zero;
+    CharacterController cc;
     float rotationX = 0;
 
     [HideInInspector]
@@ -37,7 +38,7 @@ public class SC_FPSController : MonoBehaviour
             CameraManager.instance.DisableNPCamera();
         }
 
-        rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CharacterController>();
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -47,7 +48,7 @@ public class SC_FPSController : MonoBehaviour
     }
 
     void OnEnable() {
-        Debug.Log(InputReader.instance == null);
+        // Debug.Log(InputReader.instance == null);
     }
 
     void OnDestroy() {
@@ -55,8 +56,26 @@ public class SC_FPSController : MonoBehaviour
     }
 
     void Update() {
-        MovePlayer();
         RotatePlayer();
+    }
+
+    void FixedUpdate() {
+        MovePlayer();
+    }
+
+    void MovePlayer() {
+        // Get the realigned forward and right directions
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
+ 
+        // Find the horizontal and vertical movement speeds
+        float curSpeedX = canMove ? walkingSpeed * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? walkingSpeed * Input.GetAxis("Horizontal") : 0;
+
+        // Apply the movement speeds to the appropriate direction
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+ 
+        cc.SimpleMove(moveDirection); // Simple move allows gravity to be maintained
     }
 
     void RotatePlayer() {
@@ -67,25 +86,6 @@ public class SC_FPSController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0); // Rotate the camera around the x axis
             transform.rotation *= Quaternion.Euler(0, InputReader.instance.mouseVector.x * lookSpeed, 0); // Rotate the player around the y axis
         }
-    }
-
-    void MovePlayer() {
-        Vector2 baseMoveVector = InputReader.instance.moveVector.normalized; // Normalize the input vector
-
-        // Get the current forward and right vectors
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
-        // Get the intended x and (z) speeds
-        float curSpeedX = walkingSpeed * baseMoveVector.y;
-        float curSpeedY = walkingSpeed * baseMoveVector.x;
-
-        // Align those speeds to the forward and right vectors, and maintain y velocity
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-        moveDirection.y = rb.velocity.y;
-
-        // Set the current velocity to the move direction
-        rb.velocity = moveDirection;
     }
 
     // Store the player state and lock them
