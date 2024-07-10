@@ -64,18 +64,18 @@ public class SC_FPSController : MonoBehaviour
     }
 
     void MovePlayer() {
-        // Get the realigned forward and right directions
+        // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
- 
-        // Find the horizontal and vertical movement speeds
+        // Press Left Shift to run
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? walkingSpeed * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? walkingSpeed * Input.GetAxis("Horizontal") : 0;
-
-        // Apply the movement speeds to the appropriate direction
+        float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
- 
-        cc.SimpleMove(moveDirection); // Simple move allows gravity to be maintained
+
+        // Move the controller
+        cc.SimpleMove(moveDirection);
     }
 
     void RotatePlayer() {
@@ -113,3 +113,4 @@ public class SC_FPSController : MonoBehaviour
         }
     }
 }
+
