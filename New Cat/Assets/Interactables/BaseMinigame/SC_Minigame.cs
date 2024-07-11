@@ -5,6 +5,7 @@ using UnityEngine;
 public class SC_Minigame : MonoBehaviour, I_Interact
 {
     [SerializeField] bool available = false;
+    public string needName;
     [Range(1, 3)]
     [SerializeField] int type = 2;
     
