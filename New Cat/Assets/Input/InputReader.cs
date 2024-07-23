@@ -11,12 +11,17 @@ public class InputReader : MonoBehaviour
 {
     public static InputReader instance;
 
-    [Header("Input Variables")]
+    [Header("Default Input Variables")]
     public Vector2 moveVector = new Vector2(0f, 0f);
     public Vector2 mouseVector = new Vector2(0f, 0f);
     public bool interact = false;
     public bool pause = false;
     public bool exit = false;
+
+    [Header("Work Input Variables")]
+    public bool isAimRight = false;
+    public bool isAimLeft = false;
+    public bool fire = false;
 
     [Header("Input Behavior Variables")]
     [Tooltip("Filters and smooths mouse input; larger values = less filtering and jerkier movement")]
@@ -56,6 +61,7 @@ public class InputReader : MonoBehaviour
     }
 
     void GetInput() {
+        // Default actions
         moveVector.x = player.GetAxis("MoveHorizontal");
         moveVector.y = player.GetAxis("MoveVertical");
 
@@ -69,6 +75,12 @@ public class InputReader : MonoBehaviour
         interact = player.GetButtonDown("Interact");
         pause = player.GetButtonDown("Pause");
         exit = player.GetButtonDown("Exit");
+
+        // Work Actions
+        isAimLeft = player.GetButtonDown("AimLeft");
+        Debug.Log(moveVector);
+        isAimRight = player.GetButtonDown("AimRight");
+        fire = player.GetButtonDown("Fire");
     }
 
     void ProcessInput() {

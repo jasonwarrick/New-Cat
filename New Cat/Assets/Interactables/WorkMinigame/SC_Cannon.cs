@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SC_Cannon : MonoBehaviour
 {
-    Vector3 mouseScreenPos;
-    Vector3 mouseWorldPos;
+    [SerializeField] float turnSpeed;
+    [SerializeField] float turnMax;
 
     Camera cam;
 
@@ -18,9 +18,8 @@ public class SC_Cannon : MonoBehaviour
     }
 
     void AimCannon() {
-        mouseScreenPos = Input.mousePosition;
-        mouseScreenPos.z = 1f;
-        mouseWorldPos = cam.ScreenToWorldPoint(mouseScreenPos);
-        transform.LookAt(mouseWorldPos, Vector3.left);
+        if (InputReader.instance.fire) {
+            Debug.Log("Fire");
+        }
     }
 }
