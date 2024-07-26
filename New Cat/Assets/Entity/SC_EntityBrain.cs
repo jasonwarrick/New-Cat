@@ -37,13 +37,22 @@ public class SC_EntityBrain : MonoBehaviour
         CatNeed catNeed = FindNeed(needName);
         if (catNeed == null) { return;}
 
-        catNeed.IncreasePriority(baseNeedInc);
+        if (catNeed.IncreasePriority(baseNeedInc)) { // If the need is full
+            TriggerFullNeed(needName);
+        }
     }
 
-    void IncreaseNeed(string needName, int newInc) { // Increase the priority of a need by a specific amount
+    public void IncreaseNeed(string needName, int newInc) { // Increase the priority of a need by a specific amount
         CatNeed catNeed = FindNeed(needName);
         if (catNeed == null) { return;}
 
         catNeed.IncreasePriority(newInc);
+    }
+
+    public void TriggerFullNeed(string needName) {
+        CatNeed catNeed = FindNeed(needName);
+        if (catNeed == null) { return;}
+
+        
     }
 }

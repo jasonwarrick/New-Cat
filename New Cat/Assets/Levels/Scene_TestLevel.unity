@@ -476,12 +476,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611373198}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.303, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.748, y: 0.303, z: 0}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2033952559}
+  m_Father: {fileID: 947309416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &611373203
 MonoBehaviour:
@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 947309418}
   - component: {fileID: 947309417}
   - component: {fileID: 947309420}
+  - component: {fileID: 947309421}
   m_Layer: 7
   m_Name: TestMinigame
   m_TagString: Test
@@ -648,6 +649,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1405852271}
+  - {fileID: 611373202}
   m_Father: {fileID: 2033952559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &947309417
@@ -741,6 +743,21 @@ MonoBehaviour:
   requiredObject: {fileID: 611373198}
   minigameSceneName: Scene_Minigame_Test
   minigameSetup: {fileID: 0}
+--- !u!114 &947309421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947309415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ebdaa29a7f1c0e4d81a2f699d404cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityLight: 1
+  minigame: {fileID: 0}
+  pickup: {fileID: 0}
 --- !u!1001 &1159168668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -749,6 +766,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2431148040137234268, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
+        type: 3}
+      propertyPath: testScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6318734621551657733, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
       propertyPath: m_Name
@@ -1009,7 +1031,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 283967205}
-  - {fileID: 611373202}
   - {fileID: 1169946834}
   - {fileID: 947309416}
   m_Father: {fileID: 0}

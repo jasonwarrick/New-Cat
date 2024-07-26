@@ -78,7 +78,6 @@ public class InputReader : MonoBehaviour
 
         // Work Actions
         isAimLeft = player.GetButtonDown("AimLeft");
-        Debug.Log(moveVector);
         isAimRight = player.GetButtonDown("AimRight");
         fire = player.GetButtonDown("Fire");
     }

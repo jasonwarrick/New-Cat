@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Interactables/WorkMinigame/Scene_Minigame_Work.unity
+- path: Assets/Levels/Scene_TestLevel.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
