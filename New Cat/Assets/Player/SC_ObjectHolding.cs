@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SC_ObjectHolding : MonoBehaviour
-{
+{    
     [SerializeField] float itemSwapSpeed;
 
     public GameObject heldObject;
@@ -60,6 +60,6 @@ public class SC_ObjectHolding : MonoBehaviour
         heldObject = newObject;
         newObject = null;
 
-        GameManager.instance.HeldObject = heldObject;
+        GameManager.instance.UpdateHeldObject(heldObject);
     }
 }

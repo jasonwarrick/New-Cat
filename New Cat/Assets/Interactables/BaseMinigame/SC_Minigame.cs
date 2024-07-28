@@ -23,22 +23,31 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     public string minigameSceneName;
 
     GameManager gameManager;
+    SC_MinigameLightManager minigameLightManager;
     Transform playerCamera;
     public SC_MinigameSetup minigameSetup;
 
     void Start() {
         playerCamera = FindObjectOfType<Camera>().transform;
+        minigameLightManager = GetComponentInChildren<SC_MinigameLightManager>();
 
         GameManager.instance.InitializeMinigame(minigameSceneName);
+        GameManager.changedHeldItem += UpdateAvailable;
     }
 
     void Update() {
-        available = GameManager.instance.HeldObject == requiredObject; // Set the minigame availability to true if the held object matches the required object
-        // Might need to add functionality to change availability according to additional factors
-
         if (InputReader.instance.exit) {
             ExitMinigame();
         }
+    }
+
+    void UpdateAvailable() {
+        available = GameManager.instance.HeldObject == requiredObject; // Set the minigame availability to true if the held object matches the required object
+        // Might need to add functionality to change availability according to additional factors
+
+        if (minigameLightManager == null) { return; }
+
+        minigameLightManager.SetLocation();
     }
 
     public bool Interact(SC_PlayerInteract playerInteract) {

@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     public delegate void E_PauseGame(bool isPaused);
     public static E_PauseGame pauseGame;
 
+    public delegate void ChangedHeldItem();
+    public static ChangedHeldItem changedHeldItem;
+
     public bool isPaused = false;
     public bool isInMinigame = false;
     GameObject heldObject = null;
     public GameObject HeldObject {
         get { return heldObject; }
-        set { heldObject = value;}
     }
 
     public SC_PlayerInteract playerInteract;
@@ -42,6 +44,11 @@ public class GameManager : MonoBehaviour
 
             pauseGame.Invoke(isPaused); // Trigger the pause event again
         }
+    }
+
+    public void UpdateHeldObject(GameObject newHeldObject) {
+        heldObject = newHeldObject;
+        changedHeldItem.Invoke();
     }
 
     void SetPlayerCanInteract() {
