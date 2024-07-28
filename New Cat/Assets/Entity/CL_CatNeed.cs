@@ -6,6 +6,7 @@ using UnityEngine;
 public class CatNeed
 {
     public string name;
+    public bool isFull = false;
     public GameObject minigame;
     int priority = 0;
 
@@ -20,9 +21,15 @@ public class CatNeed
 
         if (priority >= maxPriority) {
             Debug.Log(name + " has reached max priority");
-            return true;
+            isFull = true;
+            return isFull;
         }
 
-        return false;
+        return isFull;
+    }
+
+    public void Reset() {
+        isFull = false;
+        priority = 0;
     }
 }

@@ -40,10 +40,10 @@ public class SC_ObjectHolding : MonoBehaviour
     IEnumerator MoveObjects() {
         while(counter <= itemSwapSpeed) {
             counter += Time.deltaTime;
-            float smoothedCounter = 1 - Mathf.Pow(1 - counter, 3); // Smooth the counter variable with a cubic function
+            // float smoothedCounter = 1 - Mathf.Pow(1 - counter, 3); // Smooth the counter variable with a cubic function
 
-            heldObject.transform.localPosition = Vector3.Lerp(heldObject.transform.localPosition, swapPosition, smoothedCounter / itemSwapSpeed); // Move the held object to where the selected object was taken from
-            newObject.transform.localPosition = Vector3.Lerp(newObject.transform.localPosition, Vector3.zero, smoothedCounter / itemSwapSpeed); // Move the selected object to the hold point
+            heldObject.transform.localPosition = Vector3.Lerp(heldObject.transform.localPosition, swapPosition, counter / itemSwapSpeed); // Move the held object to where the selected object was taken from
+            newObject.transform.localPosition = Vector3.Lerp(newObject.transform.localPosition, Vector3.zero, counter / itemSwapSpeed); // Move the selected object to the hold point
 
             yield return null;
         }

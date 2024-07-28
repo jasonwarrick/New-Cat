@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class SC_EntityBrain : MonoBehaviour
 {
+    public static SC_EntityBrain instance;
+
     [SerializeField] int baseNeedInc;
+    [SerializeField] float needTimer;
+
+    float counter = 0f;
+    bool stopCounter = false; // Test variable
 
     public List<CatNeed> catNeeds;
 
     void Awake() {
+        instance = this;
         CatNeed blank = new CatNeed();
 
         SC_Minigame[] minigames = FindObjectsOfType<SC_Minigame>();
@@ -20,6 +27,15 @@ public class SC_EntityBrain : MonoBehaviour
                     continue;
                 }
             }
+        }
+    }
+
+    void Update() {
+        counter += Time.deltaTime;
+
+        if (counter >= needTimer & !stopCounter) {
+            TriggerFullNeed("test");
+            stopCounter = true;
         }
     }
 
@@ -52,7 +68,15 @@ public class SC_EntityBrain : MonoBehaviour
     public void TriggerFullNeed(string needName) {
         CatNeed catNeed = FindNeed(needName);
         if (catNeed == null) { return;}
+        Debug.Log(needName + " is full");
 
-        
+        catNeed.minigame.GetComponent<SC_Minigame>().UpdateNeeded(true);
+    }
+
+    public void ResetNeed(string needName) {
+        CatNeed catNeed = FindNeed(needName);
+        if (catNeed == null) { return;}
+
+        catNeed.Reset();
     }
 }

@@ -19,7 +19,7 @@ public class SC_MinigameLightManager : MonoBehaviour
 
     void Start() {
         SetLocation();
-        // ToggleLight(false);
+        ToggleLight(false);
     }
 
     public void ToggleLight(bool turnOn) {
@@ -29,15 +29,17 @@ public class SC_MinigameLightManager : MonoBehaviour
     }
 
     public void SetLocation() {
-        if (GameManager.instance.HeldObject == null || GameManager.instance.HeldObject.name != pickup.name) {
-            location = pickup.position;
-            Debug.Log("Light at pickup");
-        } else {
-            location = minigame.position;
-            Debug.Log("Light at home");
-        }
+        if (minigame.GetComponent<SC_Minigame>().Needed) {
+            if (GameManager.instance.HeldObject == null || GameManager.instance.HeldObject.name != pickup.name) {
+                location = pickup.position;
+                Debug.Log("Light at pickup");
+            } else {
+                location = minigame.position;
+                Debug.Log("Light at home");
+            }
 
-        location = new Vector3(location.x, location.y + lightHeight, location.z);
-        transform.position = location;
+            location = new Vector3(location.x, location.y + lightHeight, location.z);
+            transform.position = location;
+        }
     }
 }
