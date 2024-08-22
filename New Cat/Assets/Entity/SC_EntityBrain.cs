@@ -35,6 +35,7 @@ public class SC_EntityBrain : MonoBehaviour
 
         if (counter >= needTimer & !stopCounter) {
             TriggerFullNeed("test");
+            TriggerFullNeed("test2");
             stopCounter = true;
         }
     }
