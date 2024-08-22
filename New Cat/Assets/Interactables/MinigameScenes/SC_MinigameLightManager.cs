@@ -6,7 +6,10 @@ public class SC_MinigameLightManager : MonoBehaviour
 {
     public bool entityLight = true;
     [SerializeField] float lightHeight;
-
+    
+    public bool forceOff = false;
+    bool isNeeded = false;
+    bool isRequiredObjectHeld = false;
     Vector3 location;
 
     public Transform minigame;
@@ -23,14 +26,24 @@ public class SC_MinigameLightManager : MonoBehaviour
     }
 
     public void ToggleLight(bool turnOn) {
+        isNeeded = minigame.GetComponent<SC_Minigame>().Needed;
+        isRequiredObjectHeld = GameManager.instance.HeldObject != null && GameManager.instance.HeldObject.name == pickup.name;
+
         SetLocation();
+
 
         lightObject.SetActive(turnOn);
     }
 
+    public void ToggleForceOff(bool isNeededOff) {
+        forceOff = isNeededOff;
+
+        ToggleLight(forceOff);
+    }
+
     public void SetLocation() {
-        if (minigame.GetComponent<SC_Minigame>().Needed) {
-            if (GameManager.instance.HeldObject == null || GameManager.instance.HeldObject.name != pickup.name) {
+        if (isNeeded) {
+            if (!isRequiredObjectHeld) {
                 location = pickup.position;
                 Debug.Log("Light at pickup");
             } else {

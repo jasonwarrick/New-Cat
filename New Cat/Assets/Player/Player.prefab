@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cc229f07dc515409eac5481ea2d993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSwapSpeed: 0.5
+  itemSwapSpeed: 0.25
   heldObject: {fileID: 8466287808481800612}
   gameObjects: {fileID: 0}
 --- !u!1 &2532866562919087985

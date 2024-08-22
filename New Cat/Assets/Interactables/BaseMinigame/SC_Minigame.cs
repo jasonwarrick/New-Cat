@@ -53,7 +53,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     void UpdateAvailable() {
-        available = GameManager.instance.HeldObject == requiredObject && needed; // Set the minigame availability to true if the held object matches the required object
+        available = GameManager.instance.HeldObject.name != "EmptyHeldObject" && GameManager.instance.HeldObject == requiredObject && needed; // Set the minigame availability to true if the held object matches the required object
         // Might need to add functionality to change availability according to additional factors
 
         if (minigameLightManager == null) { return; }
@@ -91,8 +91,8 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
     void CompleteMinigame() {
         SC_EntityBrain.instance.ResetNeed(needName);
-        minigameLightManager.ToggleLight(false);
         needed = false;
+        minigameLightManager.ToggleLight(needed);
 
         Debug.Log("Minigame completed");
     }
