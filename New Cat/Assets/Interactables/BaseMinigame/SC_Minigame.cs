@@ -5,6 +5,7 @@ using UnityEngine;
 public class SC_Minigame : MonoBehaviour, I_Interact
 {
     [SerializeField] bool available = false;
+    [SerializeField] bool hasLight = true;
     bool needed = false;
     public string needName;
     [Range(1, 3)]
@@ -53,10 +54,10 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     void UpdateAvailable() {
-        available = GameManager.instance.HeldObject.name != "EmptyHeldObject" && GameManager.instance.HeldObject == requiredObject && needed; // Set the minigame availability to true if the held object matches the required object
+        available = requiredObject == null || GameManager.instance.HeldObject.name != "EmptyHeldObject" && GameManager.instance.HeldObject == requiredObject && needed; // Set the minigame availability to true if the held object matches the required object
         // Might need to add functionality to change availability according to additional factors
 
-        if (minigameLightManager == null) { return; }
+        if (minigameLightManager == null || !hasLight) { return; }
 
         minigameLightManager.ToggleLight(needed);
     }
@@ -92,7 +93,10 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     void CompleteMinigame() {
         SC_EntityBrain.instance.ResetNeed(needName);
         needed = false;
-        minigameLightManager.ToggleLight(needed);
+
+        if (hasLight) {
+            minigameLightManager.ToggleLight(needed);
+        }
 
         Debug.Log("Minigame completed");
     }
