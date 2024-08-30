@@ -16,10 +16,6 @@ public class SceneHandler : MonoBehaviour
         DontDestroyOnLoad(this);
 
         instance = this;
-        
-        if (!testScene) {
-            AdditiveLoadScene("Scene_UI");
-        }
     }
 
     // Load the indicated scene additively, and add it to the list of loaded scenes
