@@ -34,15 +34,17 @@ public class SC_EntityBrain : MonoBehaviour
         counter += Time.deltaTime;
 
         if (counter >= needTimer & !stopCounter) {
-            TriggerFullNeed("test");
-            TriggerFullNeed("test2");
+            TriggerFullNeed("left");
+            TriggerFullNeed("right");
             stopCounter = true;
         }
     }
 
     CatNeed FindNeed(string needName) {
+        Debug.Log("looking for " + needName);
         foreach (CatNeed catNeed in catNeeds) {
             if (catNeed.name == needName) {
+                Debug.Log(catNeed.name + " has been found");
                 return catNeed;
             }
         }
@@ -69,15 +71,17 @@ public class SC_EntityBrain : MonoBehaviour
     public void TriggerFullNeed(string needName) {
         CatNeed catNeed = FindNeed(needName);
         if (catNeed == null) { return;}
-        Debug.Log(needName + " is full");
+        // Debug.Log(needName + " is full");
 
         catNeed.minigame.GetComponent<SC_Minigame>().UpdateNeeded(true);
     }
 
     public void ResetNeed(string needName) {
+        Debug.Log("Resetting " + needName);
         CatNeed catNeed = FindNeed(needName);
         if (catNeed == null) { return;}
 
         catNeed.Reset();
+        Debug.Log(catNeed.name + " is reset");
     }
 }

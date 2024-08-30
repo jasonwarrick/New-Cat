@@ -44,8 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9796b23b31698894dbbc008ae12d5770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseNeedInc: 0
+  needTimer: 2
   catNeeds:
-  - name: 
+  - name: left
+    isFull: 0
     minigame: {fileID: 0}
-    priority: 0
-  test: 
+  - name: right
+    isFull: 0
+    minigame: {fileID: 0}

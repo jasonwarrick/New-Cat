@@ -7,6 +7,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     [SerializeField] bool available = false;
     [SerializeField] bool hasLight = true;
     bool needed = false;
+    bool isInMinigame = false;
     public string needName;
     [Range(1, 3)]
     [SerializeField] int type = 2;
@@ -43,7 +44,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     void Update() {
-        if (InputReader.instance.exit) {
+        if (isInMinigame && InputReader.instance.exit) {
             ExitMinigame();
         }
     }
@@ -59,13 +60,14 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
         if (minigameLightManager == null || !hasLight) { return; }
 
-        minigameLightManager.ToggleLight(needed);
+        minigameLightManager.ToggleLight();
     }
 
     public bool Interact(SC_PlayerInteract playerInteract) {
         if (!available) { Debug.Log("Minigame is not available"); return available; }
 
         Debug.Log("Interacted");
+        Debug.Log(gameObject.name);
 
         SC_FPSController.instance.LockPlayer();
         GameManager.instance.StartMinigame(minigameSceneName);
@@ -74,28 +76,30 @@ public class SC_Minigame : MonoBehaviour, I_Interact
             minigameSetup.gameObject.SetActive(true);
         }
 
+        isInMinigame = true;
+
         return available;
     }
 
     void ExitMinigame() {
-        if (GameManager.instance.isInMinigame) {
-            SC_FPSController.instance.UnlockPlayer();
-            GameManager.instance.StopMinigame(minigameSceneName);
+        SC_FPSController.instance.UnlockPlayer();
+        GameManager.instance.StopMinigame(minigameSceneName);
 
-            if (minigameSetup != null) {
-                minigameSetup.TurnOffSetup();
-            }
-
-            CompleteMinigame();
+        if (minigameSetup != null) {
+            minigameSetup.TurnOffSetup();
         }
+
+        CompleteMinigame();
+        isInMinigame = false;
     }
 
     void CompleteMinigame() {
+        Debug.Log("Completed " + gameObject.name);
         SC_EntityBrain.instance.ResetNeed(needName);
         needed = false;
 
         if (hasLight) {
-            minigameLightManager.ToggleLight(needed);
+            minigameLightManager.ToggleLight();
         }
 
         Debug.Log("Minigame completed");

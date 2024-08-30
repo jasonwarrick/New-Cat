@@ -26,10 +26,10 @@ public class SC_MinigameLightManager : MonoBehaviour
 
     void Start() {
         SetLocation();
-        ToggleLight(false);
+        ToggleLight();
     }
 
-    public void ToggleLight(bool turnOn) {
+    public void ToggleLight() {
         isNeeded = minigame.GetComponent<SC_Minigame>().Needed;
         isRequiredObjectHeld = GameManager.instance.HeldObject != null && GameManager.instance.HeldObject.name == pickup.name;
         isEmptyObjectHeld = GameManager.instance.HeldObject != null && GameManager.instance.HeldObject.name == "EmptyHeldObject";
@@ -52,12 +52,14 @@ public class SC_MinigameLightManager : MonoBehaviour
                 onLight.SetActive(false);
             }
         }
+
+        // Debug.Log("Needed = " + isNeeded + "; req held = " + isRequiredObjectHeld + "; empty held = " + isEmptyObjectHeld);
     }
 
     public void ToggleForceOff(bool isNeededOff) {
         forceOff = isNeededOff;
 
-        ToggleLight(forceOff);
+        ToggleLight();
     }
 
     public void SetLocation() {
