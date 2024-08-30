@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,9 +11,10 @@ public class SceneHandler : MonoBehaviour
     public List<string> loadedScenes = new List<string>();
 
     [Header("Debugging")]
-    [SerializeField] bool testScene;
+    [SerializeField] bool testObject;
 
     void Awake() {
+        if(FindObjectsOfType<SceneHandler>().Length > 1 && testObject) { Destroy(gameObject); } 
         DontDestroyOnLoad(this);
 
         instance = this;
@@ -31,18 +33,22 @@ public class SceneHandler : MonoBehaviour
         loadedScenes.Add(sceneName);
     }
 
-    void UnloadScene(string sceneName) {
+    IEnumerator UnloadScene(string sceneName) {
+        Debug.Log("Start unload");
+        yield return null;
         SceneManager.UnloadSceneAsync(sceneName);
         loadedScenes.Remove(sceneName);
+        Debug.Log("Scene unloaded");
     }
 
     public void LoadMainMenu() {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Scene_MainMenu");
         UIManager.instance.ToggleCanvas("main menu");
     }
 
     public void LoadGame() {
-        AdditiveLoadScene("TestLevel");
+        AdditiveLoadScene("Scene_TestLevel");
+        StartCoroutine(UnloadScene("Scene_MainMenu"));
     }
 
     public void QuitGame() {

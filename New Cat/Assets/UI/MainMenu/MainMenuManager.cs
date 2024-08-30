@@ -7,7 +7,7 @@ public class MainMenuManager : MonoBehaviour
     UIManager uiManager;
     GameManager gameManager;
     
-    void Awake() {
+    void Start() {
         uiManager = transform.parent.GetComponent<UIManager>();
         gameManager = GameManager.instance;
     }
