@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SC_EntityBrain : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class SC_EntityBrain : MonoBehaviour
         if (counter >= needTimer & !stopCounter) {
             TriggerFullNeed("left");
             TriggerFullNeed("right");
+            TriggerFullNeed("middle");
             stopCounter = true;
         }
     }
