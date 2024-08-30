@@ -2,11 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MoveTo : MonoBehaviour {
+public class SC_CatDestinationSetter : MonoBehaviour {
     
     [SerializeField] Transform goal;
 
-    bool readyToGo = false;
+    bool isMovingToDest = false;
+    Vector3 currentDest;
 
     Queue<Transform> destinations = new Queue<Transform>();
 
@@ -14,17 +15,42 @@ public class MoveTo : MonoBehaviour {
     
     void Awake () {
         agent = GetComponent<NavMeshAgent>();
-        AddDestination(goal);
-        readyToGo = true;
+        // AddDestination(goal);
     }
 
     public void AddDestination(Transform newDestination) {
         destinations.Enqueue(newDestination);
+        Debug.Log("Added destination: " + newDestination.name);
     }
 
     void Update() {
-        if (readyToGo && destinations.Count > 0) {
-            agent.SetDestination(destinations.Dequeue().position);
+        if (!isMovingToDest && destinations.Count > 0) {
+            SetNextDestination();
+            MoveToDestination();
+        } else {
+            isMovingToDest = !GetPathComplete();
         }
+    }
+
+    void SetNextDestination() {
+        currentDest = destinations.Dequeue().position;
+        Debug.Log("Moving to first destination in queue");
+    }
+
+    void MoveToDestination() {
+        agent.SetDestination(currentDest);
+        isMovingToDest = true;
+    }
+
+    bool GetPathComplete() {
+        if (!agent.pathPending) {
+            if (agent.remainingDistance <= agent.stoppingDistance) {
+                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

@@ -14,10 +14,12 @@ public class SC_EntityBrain : MonoBehaviour
     bool stopCounter = false; // Test variable
 
     public List<CatNeed> catNeeds;
+    SC_CatDestinationSetter catDestSetter;
 
     void Awake() {
         instance = this;
         CatNeed blank = new CatNeed();
+        catDestSetter = FindObjectOfType<SC_CatDestinationSetter>();
 
         SC_Minigame[] minigames = FindObjectsOfType<SC_Minigame>();
 
@@ -43,10 +45,10 @@ public class SC_EntityBrain : MonoBehaviour
     }
 
     CatNeed FindNeed(string needName) {
-        Debug.Log("looking for " + needName);
+        // Debug.Log("looking for " + needName);
         foreach (CatNeed catNeed in catNeeds) {
             if (catNeed.name == needName) {
-                Debug.Log(catNeed.name + " has been found");
+                // Debug.Log(catNeed.name + " has been found");
                 return catNeed;
             }
         }
@@ -76,6 +78,7 @@ public class SC_EntityBrain : MonoBehaviour
         // Debug.Log(needName + " is full");
 
         catNeed.minigame.GetComponent<SC_Minigame>().UpdateNeeded(true);
+        catDestSetter.AddDestination(catNeed.minigame.transform);
     }
 
     public void ResetNeed(string needName) {

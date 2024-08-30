@@ -66,10 +66,10 @@ public class SC_MinigameLightManager : MonoBehaviour
         if (isNeeded) {
             if (!isRequiredObjectHeld) {
                 location = pickup.position;
-                Debug.Log("Light at pickup");
+                // Debug.Log("Light at pickup");
             } else {
                 location = minigame.position;
-                Debug.Log("Light at home");
+                // Debug.Log("Light at home");
             }
 
             location = new Vector3(location.x, location.y + lightHeight, location.z);
