@@ -17,7 +17,7 @@ public class SC_CatBrain : MonoBehaviour
     IState currentState;
 
     Idle idleState = new Idle();
-    Walking walkingState = new Walking();
+    WalkingToDest walkingtoDestState = new WalkingToDest();
 
     void Awake() {
         ChangeState(idleState);
@@ -36,6 +36,6 @@ public class SC_CatBrain : MonoBehaviour
 
     public void MoveToMinigame(Transform newGoal) {
         nav_goal = newGoal;
-        ChangeState(walkingState);
+        ChangeState(walkingtoDestState);
     }
 }
