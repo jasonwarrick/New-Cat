@@ -9,9 +9,11 @@ public class SC_Maze_Player : MonoBehaviour
     Vector2 currentInput = new Vector2(0f, 0f);
 
     Rigidbody2D rb;
+    SC_Maze_Manager mazeManager;
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
+        mazeManager = FindObjectOfType<SC_Maze_Manager>();
     }
 
     void Update() {
@@ -33,6 +35,7 @@ public class SC_Maze_Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacles")) {
             Debug.Log("hit wall");
+            mazeManager.PlayerHit();
         }
     }
 }
