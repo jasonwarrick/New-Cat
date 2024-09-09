@@ -11,7 +11,6 @@ public class SC_MinigameSetup : MonoBehaviour
     SC_Minigame minigameScript;
 
     void Awake() {
-        Debug.Log(gameObject.name);
         playerCam = FindObjectOfType<Camera>().transform;
 
         SC_Minigame[] minigames = FindObjectsOfType<SC_Minigame>();

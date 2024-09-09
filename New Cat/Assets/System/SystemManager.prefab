@@ -52,6 +52,7 @@ MonoBehaviour:
   isAimRight: 0
   isAimLeft: 0
   fire: 0
+  maze_moveVector: {x: 0, y: 0}
   snappiness: 10
   joystickLookFactor: 2.5
   usingJoystick: 0
@@ -374,6 +375,9 @@ MonoBehaviour:
       - _enabled: 1
         _categoryId: 0
         _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
       _defaultMouseMaps:
       - _enabled: 1
         _categoryId: 0
@@ -381,6 +385,9 @@ MonoBehaviour:
       _defaultKeyboardMaps:
       - _enabled: 1
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultCustomControllerMaps: []
       _startingCustomControllers: []
@@ -485,6 +492,24 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
+    - _id: 10
+      _name: Maze_MoveVertical
+      _type: 0
+      _descriptiveName: 
+      _positiveDescriptiveName: Up
+      _negativeDescriptiveName: Down
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
+    - _id: 11
+      _name: Maze_MoveHorizontal
+      _type: 0
+      _descriptiveName: 
+      _positiveDescriptiveName: Right
+      _negativeDescriptiveName: Left
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 3
     actionCategories:
     - _name: Default
       _descriptiveName: Default
@@ -496,12 +521,19 @@ MonoBehaviour:
       _tag: 
       _id: 2
       _userAssignable: 1
+    - _name: MazeActions
+      _descriptiveName: Actions for maze minigame
+      _tag: 
+      _id: 3
+      _userAssignable: 1
     actionCategoryMap:
       list:
       - categoryId: 0
         actionIds: 00000000010000000200000003000000040000000500000006000000
       - categoryId: 2
         actionIds: 070000000900000008000000
+      - categoryId: 3
+        actionIds: 0a0000000b000000
     inputBehaviors:
     - _id: 0
       _name: Default
@@ -510,7 +542,7 @@ MonoBehaviour:
       _digitalAxisSnap: 1
       _digitalAxisInstantReverse: 0
       _digitalAxisGravity: 109.09997
-      _digitalAxisSensitivity: 3
+      _digitalAxisSensitivity: 11.500001
       _mouseXYAxisMode: 0
       _mouseOtherAxisMode: 0
       _mouseXYAxisSensitivity: 1
@@ -545,6 +577,13 @@ MonoBehaviour:
       _descriptiveName: Map for work minigame
       _tag: 
       _id: 2
+      _userAssignable: 1
+      _checkConflictsWithAllCategories: 1
+      _checkConflictsCategoryIds: 
+    - _name: MazeMinigame
+      _descriptiveName: 
+      _tag: 
+      _id: 3
       _userAssignable: 1
       _checkConflictsWithAllCategories: 1
       _checkConflictsCategoryIds: 
@@ -682,6 +721,35 @@ MonoBehaviour:
         _actionId: 8
         _elementType: 1
         _elementIdentifierId: 4
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+    - id: 2
+      categoryId: 3
+      layoutId: 0
+      name: 
+      hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 11
+        _elementType: 0
+        _elementIdentifierId: 0
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 0
+        _elementIdentifierId: 1
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
@@ -836,6 +904,101 @@ MonoBehaviour:
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
+    - id: 2
+      categoryId: 3
+      layoutId: 0
+      name: 
+      hardwareGuidString: 
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 273
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 274
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 11
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 275
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 11
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 276
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 119
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 115
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 11
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 100
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 11
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 97
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     mouseMaps:
     - id: 0
       categoryId: 0
@@ -900,16 +1063,16 @@ MonoBehaviour:
     controllerMapLayoutManagerRuleSets: []
     controllerMapEnablerRuleSets: []
     playerIdCounter: 2
-    actionIdCounter: 10
-    actionCategoryIdCounter: 3
+    actionIdCounter: 12
+    actionCategoryIdCounter: 4
     inputBehaviorIdCounter: 1
-    mapCategoryIdCounter: 3
+    mapCategoryIdCounter: 4
     joystickLayoutIdCounter: 1
     keyboardLayoutIdCounter: 2
     mouseLayoutIdCounter: 1
     customControllerLayoutIdCounter: 1
-    joystickMapIdCounter: 2
-    keyboardMapIdCounter: 2
+    joystickMapIdCounter: 3
+    keyboardMapIdCounter: 3
     mouseMapIdCounter: 2
     customControllerMapIdCounter: 0
     customControllerIdCounter: 0

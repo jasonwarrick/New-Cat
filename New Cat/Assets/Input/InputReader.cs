@@ -23,6 +23,9 @@ public class InputReader : MonoBehaviour
     public bool isAimLeft = false;
     public bool fire = false;
 
+    [Header("Maze Input Variables")]
+    public Vector2 maze_moveVector = new Vector2(0f, 0f);
+
     [Header("Input Behavior Variables")]
     [Tooltip("Filters and smooths mouse input; larger values = less filtering and jerkier movement")]
     [SerializeField] float snappiness = 10.0f; // larger values of this cause less filtering, more responsiveness
@@ -80,6 +83,10 @@ public class InputReader : MonoBehaviour
         isAimLeft = player.GetButtonDown("AimLeft");
         isAimRight = player.GetButtonDown("AimRight");
         fire = player.GetButtonDown("Fire");
+
+        // Maze Actions
+        maze_moveVector.x = player.GetAxis("Maze_MoveHorizontal");
+        maze_moveVector.y = player.GetAxis("Maze_MoveVertical");
     }
 
     void ProcessInput() {
