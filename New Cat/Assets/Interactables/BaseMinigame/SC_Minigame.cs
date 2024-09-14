@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class SC_Minigame : MonoBehaviour, I_Interact
 {
@@ -31,11 +32,13 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
     [SerializeField] GameObject requiredObject;
     public GameObject minigameObject;
+    Camera overlayCamera;
 
     SC_MinigameLightManager minigameLightManager;
 
     void Start() {
         minigameLightManager = GetComponentInChildren<SC_MinigameLightManager>();
+        overlayCamera = GetComponentInChildren<Camera>();
 
         GameManager.changedHeldItem += UpdateAvailable;
     }
@@ -76,8 +79,12 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     void SetUpMinigame(SC_PlayerInteract playerInteract) {
+        Camera playerCam = playerInteract.GetPlayerCamera();
+        Debug.Log("Player cam is " + playerCam != null);
+        playerCam.GetComponent<UniversalAdditionalCameraData>().cameraStack.Add(overlayCamera);
+
         minigameObject.SetActive(true);
-        minigameObject.transform.parent = playerInteract.GetPlayerCamera().transform;
+        minigameObject.transform.parent = playerCam.transform;
         minigameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
         minigameObject.transform.localPosition = new Vector3(0f, 0f, distFromCam);
     }

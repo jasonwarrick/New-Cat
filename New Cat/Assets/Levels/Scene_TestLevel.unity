@@ -904,6 +904,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2538463818525236801, guid: d2a13bee6c8c02041a928647532697b9,
+        type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538463818525236801, guid: d2a13bee6c8c02041a928647532697b9,
+        type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 6819464335412226170}
     - target: {fileID: 7263949564576130937, guid: d2a13bee6c8c02041a928647532697b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2703,6 +2713,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535e9a5c59e952f4bb374fb5921c2869, type: 3}
+--- !u!20 &6819464335412226170 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 278495618753364018, guid: 535e9a5c59e952f4bb374fb5921c2869,
+    type: 3}
+  m_PrefabInstance: {fileID: 6819464335412226169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7447773013912894104
 PrefabInstance:
   m_ObjectHideFlags: 0
