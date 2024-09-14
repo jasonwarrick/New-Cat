@@ -32,6 +32,14 @@ public class SC_PlayerInteract : MonoBehaviour
         canInteract = newCanInteract;
     }
 
+    public Transform GetHoldPoint() {
+        return holdPoint;
+    }
+
+    public Camera GetPlayerCamera() {
+        return cam;
+    }
+
     void Update() {
         if (canInteract) {
             RaycastHit hit;

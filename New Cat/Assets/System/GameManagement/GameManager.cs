@@ -60,17 +60,13 @@ public class GameManager : MonoBehaviour
         UIManager.instance.ToggleCanvas("hud");
     }
 
-    public void StartMinigame(string minigameName) {
+    public void StartMinigame() {
         isInMinigame = true;
         SetPlayerCanInteract();
     }
 
-    public void StopMinigame(string minigameName) {
+    public void StopMinigame() {
         isInMinigame = false;
         SetPlayerCanInteract();
-    }
-    
-    public void InitializeMinigame(string minigameName) {
-        SceneHandler.instance.LoadMinigame(minigameName);
     }
 }

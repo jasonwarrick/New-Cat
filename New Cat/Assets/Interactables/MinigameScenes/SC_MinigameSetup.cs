@@ -17,14 +17,6 @@ public class SC_MinigameSetup : MonoBehaviour
 
         if (minigames.Length == 0) { return; } // Break out of awake if the minigame is being tested in isolation
 
-        foreach(SC_Minigame minigame in minigames) {
-            if (minigame.minigameSceneName == minigameSceneName) {
-                minigameScript = minigame;
-                transform.parent = minigame.transform;
-                minigame.minigameSetup = this;
-            }
-        }
-
         gameObject.SetActive(false);
     }
 

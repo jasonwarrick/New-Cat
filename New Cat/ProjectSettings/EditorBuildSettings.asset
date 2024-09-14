@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scene_TestLevel.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Levels/Scene_Root.unity
     guid: f9e829c6fc6203f498f3f872ee11460f
   - enabled: 1
@@ -23,7 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Interactables/MinigameScenes/Scene_Minigame_Test.unity
     guid: 2015c5346971c0c418cc26f9706d693d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Interactables/WorkMinigame/Scene_Minigame_Work.unity
     guid: cf8829286f70f8445bbe1078bb4a16fc
+  - enabled: 1
+    path: Assets/Interactables/MinigameScenes/Maze/Scene_Minigame_Maze.unity
+    guid: 174396358d5794a4688729b6cb6095c7
   m_configObjects: {}

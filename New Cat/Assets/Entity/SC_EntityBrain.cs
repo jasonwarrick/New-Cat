@@ -89,4 +89,8 @@ public class SC_EntityBrain : MonoBehaviour
         catNeed.Reset();
         Debug.Log(catNeed.name + " is reset");
     }
+
+    public void FailedMinigame() {
+        Debug.Log("Entity knows minigame was failed");
+    }
 }

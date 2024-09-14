@@ -11,6 +11,9 @@ public class SC_Maze_Manager : MonoBehaviour
     }
 
     public void PlayerHit() {
+        if (SC_EntityBrain.instance != null) {
+            SC_EntityBrain.instance.FailedMinigame();
+        }
         // player.SetActive(false);
         player.transform.position = transform.position;
         // player.SetActive(true);

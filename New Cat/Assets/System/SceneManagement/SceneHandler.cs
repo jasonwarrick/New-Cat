@@ -14,7 +14,7 @@ public class SceneHandler : MonoBehaviour
     [SerializeField] bool testObject;
 
     void Awake() {
-        if(FindObjectsOfType<SceneHandler>().Length > 1 && testObject) { Destroy(gameObject); } 
+        if(FindObjectsOfType<SceneHandler>().Length > 1 && testObject) { Debug.Log("found other system instances"); Destroy(gameObject); } 
         DontDestroyOnLoad(this);
 
         instance = this;

@@ -6,6 +6,8 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 {
     [SerializeField] bool available = false;
     [SerializeField] bool hasLight = true;
+    float distFromCam = 2f;
+
     bool needed = false;
     bool isInMinigame = false;
     public string needName;
@@ -28,18 +30,13 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     }
 
     [SerializeField] GameObject requiredObject;
-    public string minigameSceneName;
+    public GameObject minigameObject;
 
-    GameManager gameManager;
     SC_MinigameLightManager minigameLightManager;
-    Transform playerCamera;
-    public SC_MinigameSetup minigameSetup;
 
     void Start() {
-        playerCamera = FindObjectOfType<Camera>().transform;
         minigameLightManager = GetComponentInChildren<SC_MinigameLightManager>();
 
-        GameManager.instance.InitializeMinigame(minigameSceneName);
         GameManager.changedHeldItem += UpdateAvailable;
     }
 
@@ -66,28 +63,35 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     public bool Interact(SC_PlayerInteract playerInteract) {
         if (!available) { Debug.Log("Minigame is not available"); return available; }
 
-        Debug.Log("Interacted");
-        Debug.Log(gameObject.name);
+        // Debug.Log("Interacted");
+        // Debug.Log(gameObject.name);
 
         SC_FPSController.instance.LockPlayer();
-        GameManager.instance.StartMinigame(minigameSceneName);
-
-        if (minigameSetup != null) {
-            minigameSetup.gameObject.SetActive(true);
-        }
-
+        GameManager.instance.StartMinigame();
+        SetUpMinigame(playerInteract);
+        
         isInMinigame = true;
 
         return available;
     }
 
+    void SetUpMinigame(SC_PlayerInteract playerInteract) {
+        minigameObject.SetActive(true);
+        minigameObject.transform.parent = playerInteract.GetPlayerCamera().transform;
+        minigameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+        minigameObject.transform.localPosition = new Vector3(0f, 0f, distFromCam);
+    }
+
+    void ResetMinigame() {
+        minigameObject.transform.parent = gameObject.transform;
+        minigameObject.transform.localPosition = new Vector3(0f, 0f, 0f);
+        minigameObject.SetActive(false);
+    }
+
     void ExitMinigame() {
         SC_FPSController.instance.UnlockPlayer();
-        GameManager.instance.StopMinigame(minigameSceneName);
-
-        if (minigameSetup != null) {
-            minigameSetup.TurnOffSetup();
-        }
+        GameManager.instance.StopMinigame();
+        ResetMinigame();
 
         CompleteMinigame();
         isInMinigame = false;
@@ -101,7 +105,5 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         if (hasLight) {
             minigameLightManager.ToggleLight();
         }
-
-        Debug.Log("Minigame completed");
     }
 }
