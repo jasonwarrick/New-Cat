@@ -84,9 +84,6 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         playerCam.GetComponent<UniversalAdditionalCameraData>().cameraStack.Add(overlayCamera);
 
         minigameObject.SetActive(true);
-        minigameObject.transform.parent = playerCam.transform;
-        minigameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
-        minigameObject.transform.localPosition = new Vector3(0f, 0f, distFromCam);
     }
 
     void ResetMinigame() {
