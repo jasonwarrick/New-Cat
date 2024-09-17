@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class SC_EntityBrain : MonoBehaviour
 {
@@ -9,8 +7,9 @@ public class SC_EntityBrain : MonoBehaviour
 
     [SerializeField] int baseNeedInc;
     [SerializeField] float needTimer;
+    [SerializeField] float needTickRate;
 
-    float counter = 0f;
+    float needCounter = 0f;
     bool stopCounter = false; // Test variable
 
     public List<CatNeed> catNeeds;
@@ -18,7 +17,6 @@ public class SC_EntityBrain : MonoBehaviour
 
     void Awake() {
         instance = this;
-        CatNeed blank = new CatNeed();
         catBrain = FindObjectOfType<SC_CatBrain>();
 
         SC_Minigame[] minigames = FindObjectsOfType<SC_Minigame>();
@@ -34,26 +32,28 @@ public class SC_EntityBrain : MonoBehaviour
     }
 
     void Update() {
-        counter += Time.deltaTime;
+        needCounter += Time.deltaTime;
 
-        if (counter >= needTimer & !stopCounter) {
-            TriggerFullNeed("left");
-            TriggerFullNeed("right");
-            TriggerFullNeed("middle");
-            stopCounter = true;
+        if (needCounter >= needTickRate) { // Every tick increase all needs by the same base amount
+            IncreaseAllNeed();
+            needCounter = 0f;
         }
     }
 
     CatNeed FindNeed(string needName) {
-        // Debug.Log("looking for " + needName);
         foreach (CatNeed catNeed in catNeeds) {
             if (catNeed.name == needName) {
-                // Debug.Log(catNeed.name + " has been found");
                 return catNeed;
             }
         }
 
         return null;
+    }
+
+    void IncreaseAllNeed() { // Increase all needs by the base amound
+        foreach (CatNeed catNeed in catNeeds) {
+            IncreaseNeed(catNeed.name);
+        }
     }
 
     public void IncreaseNeed(string needName) { // Increase the priority of a need by the base amount

@@ -18,6 +18,7 @@ public class CatNeed
 
     public bool IncreasePriority(int inc) {
         priority += inc;
+        Debug.Log("Increased priority of " + name);
 
         if (priority >= maxPriority) {
             Debug.Log(name + " has reached max priority");
