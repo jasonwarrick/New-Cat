@@ -45,7 +45,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
     void Update() {
         if (isInMinigame && InputReader.instance.exit) {
-            ExitMinigame();
+            CompleteMinigame();
         }
     }
 
@@ -96,8 +96,6 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         SC_FPSController.instance.UnlockPlayer();
         GameManager.instance.StopMinigame();
         ResetMinigame();
-
-        CompleteMinigame();
         isInMinigame = false;
     }
 
@@ -109,5 +107,15 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         if (hasLight) {
             minigameLightManager.ToggleLight();
         }
+
+        ExitMinigame();
+    }
+
+    void FailMinigame() {
+        if (hasLight) {
+            minigameLightManager.ToggleLight();
+        }
+
+        ExitMinigame();
     }
 }

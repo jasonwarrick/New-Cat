@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void ToggleCanvas(string canvasName) {
-        bool flag = false;
+        bool flag = canvasName.Equals("") ? true : false; // Only set the flag to false if the parameter is not intentionally blank
 
         // Loop through all of the canvases in the dictionary and activate the given one
         foreach (KeyValuePair<string, GameObject> pair in canvasDict) {
@@ -61,19 +61,20 @@ public class UIManager : MonoBehaviour
     }
 
     // Store the current activated canvas so it can be reactivated at a later time
-    public void StoreUIState() {
+    public void StoreUIState(string canvasName) {
         foreach (KeyValuePair<string, GameObject> pair in canvasDict) {
             if (pair.Value.activeInHierarchy) {
                 uiState = pair.Key;
             }
         }
+
+        ToggleCanvas(canvasName);
     }
 
     void PauseHandler(bool isPaused) {
         if (isPaused) { // If the game is paused:
             // Store the current UI state and show the pause canvas
-            StoreUIState();
-            ToggleCanvas("pause");
+            StoreUIState("pause");
 
             if (!InputReader.instance.usingJoystick) { // Unlock the cursor if the player isn't using a controller
                 Cursor.lockState = CursorLockMode.Confined;

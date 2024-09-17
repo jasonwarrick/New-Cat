@@ -63,10 +63,12 @@ public class GameManager : MonoBehaviour
     public void StartMinigame() {
         isInMinigame = true;
         SetPlayerCanInteract();
+        UIManager.instance.StoreUIState("");
     }
 
     public void StopMinigame() {
         isInMinigame = false;
         SetPlayerCanInteract();
+        UIManager.instance.ResumeUIState();
     }
 }
