@@ -99,7 +99,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         isInMinigame = false;
     }
 
-    void CompleteMinigame() {
+    public void CompleteMinigame() {
         Debug.Log("Completed " + gameObject.name);
         SC_EntityBrain.instance.ResetNeed(needName);
         needed = false;
@@ -111,11 +111,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
         ExitMinigame();
     }
 
-    void FailMinigame() {
-        if (hasLight) {
-            minigameLightManager.ToggleLight();
-        }
-
-        ExitMinigame();
+    public void FailMinigame() {
+        Debug.Log("Minigame failed");
     }
 }

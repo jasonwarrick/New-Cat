@@ -62,11 +62,16 @@ public class UIManager : MonoBehaviour
 
     // Store the current activated canvas so it can be reactivated at a later time
     public void StoreUIState(string canvasName) {
+        bool flag = false;
+
         foreach (KeyValuePair<string, GameObject> pair in canvasDict) {
             if (pair.Value.activeInHierarchy) {
                 uiState = pair.Key;
+                flag = true;
             }
         }
+
+        if (!flag) { uiState = "";}
 
         ToggleCanvas(canvasName);
     }

@@ -33,7 +33,7 @@ public class SC_Maze_Player : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacles")) {
+        if (other.gameObject.CompareTag("Maze_Wall")) {
             Debug.Log("hit wall");
             mazeManager.PlayerHit();
         }
