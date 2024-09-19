@@ -405,6 +405,7 @@
 "Assets/Interactables/BasePickup/SC_Pickup.cs"
 "Assets/Interactables/Environment/SC_Door.cs"
 "Assets/Interactables/I_Interact.cs"
+"Assets/Interactables/MinigameScenes/Maze/SC_Maze_Goal.cs"
 "Assets/Interactables/MinigameScenes/Maze/SC_Maze_Manager.cs"
 "Assets/Interactables/MinigameScenes/Maze/SC_Maze_Player.cs"
 "Assets/Interactables/MinigameScenes/SC_MinigameLightManager.cs"

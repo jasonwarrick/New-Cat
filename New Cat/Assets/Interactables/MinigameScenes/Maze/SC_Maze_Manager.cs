@@ -17,7 +17,16 @@ public class SC_Maze_Manager : MonoBehaviour
             SC_EntityBrain.instance.FailedMinigame();
         }
 
-        player.transform.position = transform.position;
+        ResetMaze();
         minigameManager.FailMinigame();
+    }
+
+    public void GoalReached() {
+        minigameManager.CompleteMinigame();
+        ResetMaze();
+    }
+
+    void ResetMaze() {
+        player.transform.position = transform.position;
     }
 }
