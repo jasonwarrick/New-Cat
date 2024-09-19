@@ -16,6 +16,11 @@ public class CatNeed
         minigame = inMinigame;
     }
 
+    public void SetPriority(int newPriority) {
+        priority = newPriority;
+        Debug.Log(name + " is starting at " + priority);
+    }
+
     public bool IncreasePriority(int inc) {
         priority += inc;
         Debug.Log("Increased priority of " + name);

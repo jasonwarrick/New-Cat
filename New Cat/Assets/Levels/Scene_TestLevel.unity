@@ -2171,12 +2171,17 @@ PrefabInstance:
     - target: {fileID: 4027150374784845090, guid: 4c201e517a1ad194cacd9c91af85889b,
         type: 3}
       propertyPath: baseNeedInc
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4027150374784845090, guid: 4c201e517a1ad194cacd9c91af85889b,
         type: 3}
       propertyPath: needTickRate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027150374784845090, guid: 4c201e517a1ad194cacd9c91af85889b,
+        type: 3}
+      propertyPath: maxStartPriority
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4027150374784845090, guid: 4c201e517a1ad194cacd9c91af85889b,
         type: 3}

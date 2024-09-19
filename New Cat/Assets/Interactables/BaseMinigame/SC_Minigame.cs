@@ -45,7 +45,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
 
     void Update() {
         if (isInMinigame && InputReader.instance.exit) {
-            CompleteMinigame();
+            ExitMinigame();
         }
     }
 

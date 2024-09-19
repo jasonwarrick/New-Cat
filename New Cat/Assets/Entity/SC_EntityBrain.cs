@@ -6,6 +6,7 @@ public class SC_EntityBrain : MonoBehaviour
     public static SC_EntityBrain instance;
 
     [SerializeField] int baseNeedInc;
+    [SerializeField] int maxStartPriority;
     [SerializeField] float needTimer;
     [SerializeField] float needTickRate;
 
@@ -24,7 +25,9 @@ public class SC_EntityBrain : MonoBehaviour
         foreach (CatNeed catNeed in catNeeds) { // Match each cat need to its correct minigame
             foreach (SC_Minigame minigame in minigames) {
                 if (minigame.needName == catNeed.name) {
+                    int priority = Random.Range(0, maxStartPriority);
                     catNeed.SetMinigame(minigame.gameObject);
+                    catNeed.SetPriority(priority);
                     continue;
                 }
             }
@@ -34,7 +37,7 @@ public class SC_EntityBrain : MonoBehaviour
     void Update() {
         needCounter += Time.deltaTime;
 
-        if (needCounter >= needTickRate) { // Every tick increase all needs by the same base amount
+        if (needCounter >= needTickRate && !stopCounter) { // Every tick increase all needs by the same base amount
             IncreaseAllNeed();
             needCounter = 0f;
         }
