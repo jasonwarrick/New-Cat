@@ -15,10 +15,6 @@ public class SC_ObjectHolding : MonoBehaviour
     [SerializeField] Transform gameObjects;
     Coroutine moveRoutine;
 
-    public void Start() {
-        GameManager.instance.UpdateHeldObject(heldObject);
-    }
-
     public void GrabObject(GameObject inObject) {
         if (inObject == null) { return; } // Catch any erroneous calls or calls that occur while paused
         if (swapping) { SwapObjects(); } // If the items are already swapping, stop the current swap so the new one can start
