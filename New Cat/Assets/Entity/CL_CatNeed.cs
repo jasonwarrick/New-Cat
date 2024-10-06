@@ -18,12 +18,12 @@ public class CatNeed
 
     public void SetPriority(int newPriority) {
         priority = newPriority;
-        Debug.Log(name + " is starting at " + priority);
+        // Debug.Log(name + " is starting at " + priority);
     }
 
     public bool IncreasePriority(int inc) {
         priority += inc;
-        Debug.Log("Increased priority of " + name);
+        // Debug.Log("Increased priority of " + name);
 
         if (priority >= maxPriority) {
             Debug.Log(name + " has reached max priority");

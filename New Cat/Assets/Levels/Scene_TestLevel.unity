@@ -891,15 +891,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2431148040137234268, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
-        type: 3}
-      propertyPath: testObject
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6318734621551657733, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
       propertyPath: m_Name
       value: SystemManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497793685077587453, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
+        type: 3}
+      propertyPath: tickFactor
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9038929001259950418, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
@@ -1791,6 +1791,11 @@ PrefabInstance:
     - target: {fileID: 3205941502784884682, guid: 4c201e517a1ad194cacd9c91af85889b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027150374784845090, guid: 4c201e517a1ad194cacd9c91af85889b,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027150374784845090, guid: 4c201e517a1ad194cacd9c91af85889b,

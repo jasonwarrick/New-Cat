@@ -458,6 +458,7 @@
 "Assets/Rewired/Internal/Scripts/DataStorage/UserDataStore_PlayerPrefs.cs"
 "Assets/Rewired/Internal/Scripts/InputManager.cs"
 "Assets/Rewired/Internal/Scripts/Misc/ExternalTools.cs"
+"Assets/System/Clock/SC_GameClock.cs"
 "Assets/System/GameManagement/GameManager.cs"
 "Assets/System/SceneManagement/SceneHandler.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
