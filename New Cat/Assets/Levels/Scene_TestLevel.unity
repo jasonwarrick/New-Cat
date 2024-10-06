@@ -610,6 +610,7 @@ MonoBehaviour:
   hasLight: 1
   needName: middle
   type: 2
+  triggerTime: 0:00
   requiredObject: {fileID: 46031804}
   minigameObject: {fileID: 0}
 --- !u!136 &553302618
@@ -899,7 +900,7 @@ PrefabInstance:
     - target: {fileID: 6497793685077587453, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
       propertyPath: tickFactor
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9038929001259950418, guid: 9b72e0b5c808e0f4c9b90e5e8a602ed4,
         type: 3}
@@ -1598,6 +1599,7 @@ MonoBehaviour:
   hasLight: 1
   needName: right
   type: 2
+  triggerTime: 0:00
   requiredObject: {fileID: 6340422827899299948}
   minigameObject: {fileID: 0}
 --- !u!1001 &1148831198591501639
@@ -2038,6 +2040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201933204847856656, guid: d452d5e512427764984aaf22f3911431,
+        type: 3}
+      propertyPath: triggerTime
+      value: 10:10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

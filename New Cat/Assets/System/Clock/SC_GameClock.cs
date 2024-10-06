@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SC_GameClock : MonoBehaviour
 {
+    public static SC_GameClock instance;
+
     [Tooltip("The number of seconds it takes to cause a tick of the clock")]
     [SerializeField] float tickFrequency;
     [Tooltip("The number of seconds time moves forwards by on each tick")]
@@ -17,8 +19,9 @@ public class SC_GameClock : MonoBehaviour
     public bool isClockStopped = false;
     string currentTime;
 
+    void Awake() {
+        instance = this;
 
-    void Start() {
         SetTime(10, 0);
     }
     
@@ -27,6 +30,12 @@ public class SC_GameClock : MonoBehaviour
 
         hours = newHour;
         minutes = newMinute;
+        
+        UpdateString();
+    }
+
+    public string GetTime() {
+        return currentTime;
     }
 
     void IncrementTime() {
@@ -39,15 +48,17 @@ public class SC_GameClock : MonoBehaviour
 
         hours = hours > hoursCap ? 1 : hours; // If the hours exceeds the cap, set it to 1
 
+        UpdateString();
+        
+        Debug.Log(currentTime);
+    }
+
+    void UpdateString() {
         if (minutes < 10) {
             currentTime = hours + ":0" + minutes;
         } else {
             currentTime = hours + ":" + minutes;
         }
-
-        
-        Debug.Log(currentTime);
-
     }
 
     void Update() {

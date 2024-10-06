@@ -14,6 +14,7 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     public string needName;
     [Range(1, 3)]
     [SerializeField] int type = 2;
+    [SerializeField] string triggerTime = "10:00";
     
     public bool Available {
         get { return available; }
@@ -46,6 +47,10 @@ public class SC_Minigame : MonoBehaviour, I_Interact
     void Update() {
         if (isInMinigame && InputReader.instance.exit) {
             ExitMinigame();
+        }
+
+        if (SC_GameClock.instance.GetTime() == triggerTime) {
+            Debug.Log("Time for minigame");
         }
     }
 
